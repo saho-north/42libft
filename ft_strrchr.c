@@ -6,8 +6,14 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:00:53 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 19:01:03 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/18 19:24:19 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+
+char	*ft_strrchr(const char *s, int c)
+{
+}
+
+int	main(void)

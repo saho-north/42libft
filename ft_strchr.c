@@ -6,7 +6,7 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:01:18 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 19:21:51 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/18 19:22:28 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-char	*str = "ABCDEFG";
+// char	*str = "ABCDEFG";
 
-int	main(void)
-{
-	printf("ft_strchr for C : %s\n", ft_strchr(str, 'C'));
-	printf("strchr    for C : %s\n", strchr(str, 'C'));
-}
+// int	main(void)
+// {
+// 	printf("ft_strchr for C : %s\n", ft_strchr(str, 'C'));
+// 	printf("strchr    for C : %s\n", strchr(str, 'C'));
+// }
