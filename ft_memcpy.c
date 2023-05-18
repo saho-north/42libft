@@ -6,7 +6,7 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:57:37 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/18 17:22:17 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/18 17:37:21 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	void	*ptr;
+	char	*ptrDest;
+	char	*ptrSrc;
 
-	ptr = dst;
-	while (n > 0)
+	ptrDest = (char *)dst;
+	ptrSrc = (char *)src;
+	if (ptrDest == NULL || ptrSrc == NULL)
 	{
-		*(char *)dst = *(char *)src;
-		dst++;
-		src++;
-		n--;
+		return (NULL);
 	}
-	return (ptr);
+	while (n--)
+	{
+		*(ptrDest++) = *(ptrSrc++);
+	}
+	return (dst);
 }
 
 // char	src[] = "ABCDEFG";
