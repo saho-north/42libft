@@ -6,12 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 09:57:42 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/17 10:01:18 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:01:27 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

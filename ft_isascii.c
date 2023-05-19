@@ -6,12 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 04:17:43 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 04:20:04 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:00:56 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

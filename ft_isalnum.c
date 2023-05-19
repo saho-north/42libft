@@ -6,12 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 03:52:25 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 04:01:34 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 19:59:07 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

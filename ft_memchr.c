@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 20:56:34 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/18 21:23:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/19 20:16:04 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	to_find;
 	unsigned char	*str;
+	unsigned char	to_find;
 	size_t			i;
 
 	str = (unsigned char *)s;
@@ -28,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // void	*text = "ABCDECFG";

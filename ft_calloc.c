@@ -6,7 +6,7 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 01:44:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 19:39:13 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:15:26 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	*calloc(size_t count, size_t size)
 {
 	void	*buf;
 
-	buf = 0;
+	buf = NULL;
 	buf = (void *)malloc(count * size);
 	if (!buf)
-		return (0);
+		return (NULL);
 	return (buf);
 }
 

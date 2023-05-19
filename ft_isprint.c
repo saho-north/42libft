@@ -6,12 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:19:33 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 12:27:05 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 20:01:47 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
