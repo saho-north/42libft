@@ -6,7 +6,7 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:52:54 by north             #+#    #+#             */
-/*   Updated: 2023/05/19 19:01:30 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/19 19:38:50 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@
 # include <stdbool.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <strings.h>
 # include <unistd.h>
 
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
+void	ft_bzero(void *s, size_t n);
+
 // void    ft_bzero(char *s, size_t n);
 // int     ft_isalnum(int c);
 // int     ft_isalpha(int c);
@@ -31,7 +34,8 @@ int	ft_atoi(const char *str);
 // void    *ft_memmove(void *dst, const void *src, size_t len);
 // void    ft_memset(char *b, int c, size_t len);
 // char    *ft_strchr(char *s, int c);
-// char    *ft_strcpy(char *dest, char *src);
+// Copy src to dest
+
 // char    *ft_strdup(char *src);
 // int     ft_strlen(char const *str);
 // char    *ft_strjoin(char const *s1, char const *s2);
