@@ -3,27 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: north <north@student.42.fr>                +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 17:51:01 by north            ###   ########.fr       */
+/*   Updated: 2023/05/19 18:56:33 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	bool		minus;
+	long long	sign;
 	long long	num;
 
-	if (*str == '-' || *str == '+')
+	sign = 1;
+	while (*str)
 	{
-		if (*str == '-')
-			minus = true;
+		if ('0' <= *str && *str <= '9')
+			break ;
+		else if (*str == '+' || *str == '-')
+		{
+			if (*str == '-')
+				sign = -1;
+			str++;
+			break ;
+		}
 		str++;
 	}
 	num = 0;
@@ -32,7 +37,7 @@ int	ft_atoi(char *str)
 		num = num * 10 + (*str - '0');
 		str++;
 	}
-	return ((int)(minus * num));
+	return ((int)(sign * num));
 }
 
 // int	main(void)
@@ -42,7 +47,7 @@ int	ft_atoi(char *str)
 // 	char	*str3;
 
 // 	str1 = "       \n \t \f \v \r---+--+1234ab567";
-// 	str2 = "-2147483648";
+// 	str2 = "     -2147483648";
 // 	str3 = "--++-+-23r90";
 // 	printf("%s\n", str1);
 // 	printf("ft_atoi = %d\n", ft_atoi(str1));
