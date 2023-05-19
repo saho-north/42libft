@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:15:54 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 02:37:44 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/19 12:11:09 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 #include <stdlib.h>
 
 /*
+Prototype
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+Parameters
 s:  The string from which to create the substring.
-
 start:  The start index of the substring in the string ’s’.
-
 len:  The maximum length of the substring.
 
-Allocates (with malloc(3)) and returns a substring from the string ’s’.
+Return value
+The substring.
+NULL if the allocation fails.
 
-The substring begins at index ’start’ and is of maximum size ’len’.
+Description
+Allocates (with malloc(3)) and returns a substring
+from the string ’s’.
+The substring begins at index ’start’ and is of
+maximum size ’len’.
 */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
