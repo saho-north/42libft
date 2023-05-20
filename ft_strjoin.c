@@ -6,24 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:39:12 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 03:20:26 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/20 23:55:25 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int	ft_strlen(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 void	cat_str(char const *s1, char const *s2, char *ptr)
 {
@@ -46,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (len == 0)
 	{
-		ptr = (char *)malloc(sizeof(char) * 1);
+		ptr = (char *)malloc(1);
 		*ptr = 0;
 		return (ptr);
 	}

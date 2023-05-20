@@ -6,41 +6,42 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:56:51 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/18 22:12:02 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/20 23:52:06 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strnstr(char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
+	char	*ptr;
 	size_t	head;
 	size_t	i;
 
+	ptr = (char *)haystack;
 	if (*needle == '\0')
-		return (haystack);
+		return (ptr);
 	head = 0;
-	while (haystack[head] && head < len)
+	while (ptr[head] && head < len)
 	{
 		i = 0;
-		while (haystack[head + i] == needle[i] && head + i < len)
+		while (ptr[head + i] == needle[i] && head + i < len)
 		{
 			i++;
 			if (needle[i] == '\0')
-				return (&haystack[head]);
+				return (&ptr[head]);
 		}
 		head++;
 	}
 	return (0);
 }
 
-// char	s1[] = "abcdefghijklmn";     /* 検索対象文字列 */
-// char	s2[] = "defgh";              /* 一致する場合 */
-// char	s3[] = "xyz";                /* 一致しない場合 */
-// char	s4[] = "abcdefghijklmnopqr"; /* 検索対象文字列より長い場合 */
-// char	s5[] = "";                   /* \0 */
-// char	*sp;
+// const char	s1[] = "abcdefghijklmn";     /* 検索対象文字列 */
+// const char	s2[] = "defgh";              /* 一致する場合 */
+// const char	s3[] = "xyz";                /* 一致しない場合 */
+// const char	s4[] = "abcdefghijklmnopqr"; /* 検索対象文字列より長い場合 */
+// const char	s5[] = "";                   /* \0 */
+// char		*sp = NULL;
 // int	main(void)
 // {
 // 	puts("strnstr:");

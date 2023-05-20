@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/20 17:55:06 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/21 00:10:59 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,70 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (dest);
 }
 
-int	main(void)
-{
-	char	*str;
-	char	*charset;
-	char	*trimmed_str;
+// int	main(void)
+// {
+// 	char	*str;
+// 	char	*charset;
+// 	char	*trimmed_str;
+// 	char	*str1;
+// 	char	*charset1;
+// 	char	*str2;
+// 	char	*charset2;
+// 	char	*str3;
+// 	char	*charset3;
+// 	char	*str4;
+// 	char	*charset4;
+// 	char	*str5;
+// 	char	*charset5;
 
-	str = "*-*-*ABC*-*-*";
-	charset = "*-";
-	trimmed_str = ft_strtrim(str, charset);
-	if (trimmed_str)
-	{
-		printf("%s\n", trimmed_str);
-		free(trimmed_str);
-	}
-	return (0);
-}
+// 	str = "*-*-*ABC*-*-*";
+// 	charset = "*-";
+// 	trimmed_str = ft_strtrim(str, charset);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	// Additional test cases
+// 	str1 = "   hello    ";
+// 	charset1 = " ";
+// 	trimmed_str = ft_strtrim(str1, charset1);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	str2 = "!!!123!!!";
+// 	charset2 = "!";
+// 	trimmed_str = ft_strtrim(str2, charset2);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	str3 = "abcdefg";
+// 	charset3 = "hijklmno";
+// 	trimmed_str = ft_strtrim(str3, charset3);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	str4 = "12345";
+// 	charset4 = "12345";
+// 	trimmed_str = ft_strtrim(str4, charset4);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	str5 = "";
+// 	charset5 = "";
+// 	trimmed_str = ft_strtrim(str5, charset5);
+// 	if (trimmed_str)
+// 	{
+// 		printf("%s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// 	return (0);
+// }

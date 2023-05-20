@@ -6,50 +6,38 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 02:13:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/20 23:35:58 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
+	char	*src;
+	size_t	len;
 
-	ptr = dest;
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (ptr);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		len;
-	char	*ptr;
-
+	src = (char *)s1;
 	len = 0;
 	while (src[len])
 		len++;
-	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	ptr = (char *)malloc(++len);
 	if (!ptr)
-		return (0);
-	ptr = ft_strcpy(ptr, src);
+		return (NULL);
+	ptr = (char *)ft_memcpy(ptr, src, len);
 	return (ptr);
 }
 
-// void	test_case(char *src)
+// void	test_case(const char *src)
 // {
 // 	char	*dest;
 
 // 	dest = ft_strdup(src);
+// 	//文字列のアドレス
 // 	printf("src  : %s   src  : %p\n", src, (void *)src);
 // 	printf("dest : %s   dest : %p\n", dest, (void *)dest);
+// 	//変数自体のアドレス
 // 	printf("src  : %s   &src  : %p\n", src, &src);
 // 	printf("dest : %s   &dest : %p\n", dest, &dest);
 // 	free(dest);

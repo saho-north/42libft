@@ -3,38 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:45:13 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/18 18:45:44 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/20 23:42:47 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-unsigned int	ui_ft_strlen(char *str)
+size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size)
 {
-	unsigned int	i;
+	size_t	src_len;
+	size_t	i;
 
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	src_len;
-	unsigned int	i;
-
-	src_len = ui_ft_strlen(src);
+	src_len = ft_strlen(src);
 	i = 0;
 	if (size != 0)
 	{
-		while (*src != '\0' && i + 1 < size)
+		while (*src && i + 1 < size)
 		{
 			*dest = *src;
 			dest++;
@@ -46,22 +33,20 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (src_len);
 }
 
-// char			buf1[] = "A rabbit of commanding presence";
-// char			s1[] = "Purple Bear";
-// char			buf2[] = "A rabbit of commanding presence";
-// char			s2[] = "Purple Bear";
+// char	buf1[] = "A rabbit of commanding presence";
+// char	s1[] = "Purple Bear";
+// char	buf2[] = "A rabbit of commanding presence";
+// char	s2[] = "Purple Bear";
 
 // int	main(void)
 // {
-// 	printf("\nstrlcpy-----%lu\n", strlcpy(buf1, s1,
-// 				(unsigned int)sizeof(buf1)));
+// 	printf("strlcpy-----%lu\n", strlcpy(buf1, s1, (size_t)sizeof(buf1)));
 // 	printf("%s\n", buf1);
-// 	printf("\nft_strlcpy--%u\n", ft_strlcpy(buf2, s2,
-// 				(unsigned int)sizeof(buf2)));
-// 	printf("%s\n\n", buf2);
+// 	printf("\nft_strlcpy--%zu\n", ft_strlcpy(buf2, s2, (size_t)sizeof(buf2)));
+// 	printf("%s\n", buf2);
 // 	printf("\nstrlcpy-----%lu\n", strlcpy(buf1, s1, 30));
 // 	printf("%s\n", buf1);
-// 	printf("\nft_strlcpy--%u\n", ft_strlcpy(buf2, s2, 30));
-// 	printf("%s\n\n", buf2);
+// 	printf("\nft_strlcpy--%zu\n", ft_strlcpy(buf2, s2, 30));
+// 	printf("%s\n", buf2);
 // 	return (0);
 // }

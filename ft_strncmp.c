@@ -6,16 +6,15 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 20:55:10 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/18 20:55:25 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/20 23:46:36 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && (s1[i] != 0 || s2[i] != 0))
@@ -27,13 +26,13 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (0);
 }
 
-// char	*str0 = "ABC";
-// char	*str1 = "ABD";
-// char	*str2 = "AAA";
-// char	*str3 = "ABCD";
-// char	*str4 = "AB";
-// char	*str5 = "B";
-// char	*str6 = "A";
+// const char	*str0 = "ABC";
+// const char	*str1 = "ABD";
+// const char	*str2 = "AAA";
+// const char	*str3 = "ABCD";
+// const char	*str4 = "AB";
+// const char	*str5 = "B";
+// const char	*str6 = "A";
 
 // int	main(void)
 // {
