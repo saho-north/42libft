@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 09:36:10 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/19 20:00:11 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/20 03:29:34 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_isalpha(int c)
 
 // int	main(void)
 // {
-// 	printf("\nft_isalpha\n");
+// 	printf("ft_isalpha\n");
 // 	printf("2	: %d\n", ft_isalpha('2'));
 // 	printf("e	: %d\n", ft_isalpha('e'));
 // 	printf("A	: %d\n", ft_isalpha('A'));
@@ -33,6 +33,6 @@ int	ft_isalpha(int c)
 // 	printf("2	: %d\n", isalpha('2'));
 // 	printf("e	: %d\n", isalpha('e'));
 // 	printf("A	: %d\n", isalpha('A'));
-// 	printf("?	: %d\n\n", isalpha('?'));
+// 	printf("?	: %d\n", isalpha('?'));
 // 	return (1);
 // }

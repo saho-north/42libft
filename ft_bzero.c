@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:49:10 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 19:41:08 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/20 03:06:20 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	str = (char *)s;
 	while (n > 0)
 	{
-		*str = 0;
+		*str = '\0';
 		str++;
 		n--;
 	}
