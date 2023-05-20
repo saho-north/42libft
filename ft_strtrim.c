@@ -5,47 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 23:35:13 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/19 23:47:11 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/05/20 17:55:06 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	is_charset(char c, char const *charset)
+int	is_charset(char c, char const *charset)
 {
-	while (*charset != '\0')
+	while (*charset)
 	{
 		if (c == *charset)
-			return (true);
+			return (1);
 		charset++;
 	}
-	return (false);
+	return (0);
 }
 
-void	trimmer(char const *str, char const *charset, char *dest)
+void	trimmer(char const *str, char const *charset, char *dest,
+		size_t dest_len)
 {
-	while (*str)
-	{
-		while (!is_charset(*str, charset) && *str)
-		{
-			*dest = *str;
-			dest++;
-			str++;
-		}
+	while (*str && is_charset(*str, charset))
 		str++;
+	while (*str && dest_len > 0)
+	{
+		*dest = *str;
+		dest++;
+		str++;
+		dest_len--;
 	}
 }
 
 size_t	trimmed_strlen(char const *s1, char const *set)
 {
 	size_t	dest_len;
+	int		in_word_flag;
 
 	dest_len = 0;
+	in_word_flag = 0;
 	while (*s1)
 	{
-		if (!is_charset(*s1, set))
+		if (!in_word_flag && !is_charset(*s1, set))
+			in_word_flag = 1;
+		if (in_word_flag && !is_charset(*s1, set))
 			dest_len++;
+		else if (in_word_flag && is_charset(*s1, set))
+			break ;
 		s1++;
 	}
 	return (dest_len);
@@ -59,20 +65,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (0);
 	dest_len = trimmed_strlen(s1, set);
-	dest = 0;
 	dest = (char *)malloc(dest_len + 1);
 	if (!dest)
-		return (NULL);
-	trimmer(s1, set, dest);
-	dest[dest_len] = 0;
+		return (0);
+	trimmer(s1, set, dest, dest_len);
+	dest[dest_len] = '\0';
 	return (dest);
 }
 
-// char	*str = "My 42_friend has lived with his 42_cats for 42_years.";
-// char	*charset = "42_";
+int	main(void)
+{
+	char	*str;
+	char	*charset;
+	char	*trimmed_str;
 
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strtrim(str, charset));
-// 	return (0);
-// }
+	str = "*-*-*ABC*-*-*";
+	charset = "*-";
+	trimmed_str = ft_strtrim(str, charset);
+	if (trimmed_str)
+	{
+		printf("%s\n", trimmed_str);
+		free(trimmed_str);
+	}
+	return (0);
+}
