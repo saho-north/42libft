@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:47:14 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/20 23:35:45 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/22 00:19:15 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,18 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
 	size_t	srclen;
 	size_t	i;
 
+	destlen = 0;
+	srclen = 0;
 	i = 0;
-	destlen = ft_strlen(dest);
+	if (dest)
+		destlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
 	if (size <= destlen)
 		return (size + srclen);
 	while (*dest)
+	{
 		dest++;
+	}
 	while (*src && destlen + i + 1 < size)
 	{
 		*dest = *src;
@@ -48,6 +53,7 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
 // char	src5[] = "1234";
 // char	dest6[20] = "ABCDE";
 // char	src6[] = "1234";
+// char	b[0xF] = "nyan !";
 
 // int	main(void)
 // {
@@ -76,5 +82,9 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
 // 	printf("ft: %s: %zu\n", dest5, result5);
 // 	result6 = strlcat(dest6, src6, z);
 // 	printf("lib %s: %zu\n", dest6, result6);
+// 	printf("ft: %zu\n", ft_strlcat(((void *)0), b, 0));
+// 	printf("lib: %zu\n", strlcat(((void *)0), b, 0));
+// 	/* printf("ft: %zu\n", ft_strlcat(b, ((void *)0), 2));
+// 	printf("lib: %zu\n", strlcat(b, ((void *)0), 2)); */
 // 	return (0);
 // }
