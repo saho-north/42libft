@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:57:37 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/20 12:52:35 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/21 23:42:59 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 	ptrdest = (char *)dst;
 	ptrsrc = (char *)src;
-	if (ptrdest == NULL || ptrsrc == NULL)
+	if (ptrdest == NULL && ptrsrc == NULL)
 	{
 		return (NULL);
 	}
@@ -54,5 +54,8 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 // 	printf("memcpy    = %s\n\n", (char *)memcpy(dst8, src, 10));
 // 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst9, src, 5));
 // 	printf("memcpy    = %s\n", (char *)memcpy(dst10, src, 5));
+// 	printf("failed test ->>>\n");
+// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(((void *)0), ((void *)0), 3));
+// 	printf("memcpy    = %s\n", (char *)memcpy(((void *)0), ((void *)0), 3));
 // 	return (0);
 // }
