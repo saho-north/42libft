@@ -3,30 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:00:53 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/21 00:07:00 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/22 15:58:33 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*s;
+	char	*str;
 	char	to_find;
 	size_t	len;
 
-	len = ft_strlen(str);
-	s = (char *)str;
+	str = (char *)s;
 	to_find = (char)c;
-	if (!*str)
-		return (NULL);
-	while (len >= 0)
+	len = ft_strlen(s) + 1;
+	while (len > 0)
 	{
-		if (s[len] == to_find)
-			return (&s[len]);
+		if (str[len - 1] == to_find)
+			return (&str[len - 1]);
 		len--;
 	}
 	return (0);
