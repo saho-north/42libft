@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:56:51 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/20 23:52:06 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/22 23:12:07 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 
 	ptr = (char *)haystack;
+	if (!haystack && len == 0)
+		return (NULL);
 	if (*needle == '\0')
 		return (ptr);
 	head = 0;
@@ -53,7 +55,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	printf("検索対象文字列より長い場合 : %s\n", sp);
 // 	sp = strnstr(s1, s5, 5);
 // 	printf("\\0 : %s\n", sp);
-// 	printf("\n");
+// 	sp = strnstr(((void *)0), "fake", 0);
+// 	printf("null is sent with a size of 0 : %s\n\n", sp);
+// 	//sp = strnstr(((void *)0), "fake", 3);
+// 	printf("null is sent : %s\n", sp);
 // 	puts("ft_strnstr:");
 // 	sp = ft_strnstr(s1, s2, 50);
 // 	printf("一致する場合 : %s\n", sp);
@@ -63,5 +68,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	printf("検索対象文字列より長い場合 : %s\n", sp);
 // 	sp = ft_strnstr(s1, s5, 5);
 // 	printf("\\0 : %s\n", sp);
+// 	sp = ft_strnstr(((void *)0), "fake", 0);
+// 	printf("null is sent with a size of 0 : %s\n", sp);
+// 	//sp = ft_strnstr(((void *)0), "fake", 3);
+// 	printf("null is sent : %s\n", sp);
 // 	return (0);
 // }
