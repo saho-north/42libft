@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 01:16:48 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/23 23:44:55 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,12 @@ int	ft_atoi(const char *str)
 	bool		sign;
 
 	sign = true;
-	while (*str && !('0' <= *str && *str <= '9'))
+	while (*str == ' ' || ('\t' <= *str && *str <= '\r'))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (*str == '+' || *str == '-')
-		{
-			if (*str == '-')
-				sign = false;
-			str++;
-			break ;
-		}
+		if (*str == '-')
+			sign = false;
 		str++;
 	}
 	num = convert_num(str, sign);
@@ -87,7 +84,7 @@ int	ft_atoi(const char *str)
 // 	str10 = "18446744073709551614";
 // 	str11 = "9223372036854775806";
 // 	str12 = "-9223372036854775807";
-// 	n = "";
+// 	n = "\e06050";
 // 	printf("0.  %s\n", n);
 // 	printf("ft_atoi = %d\n", ft_atoi(n));
 // 	printf("atoi    = %d\n", atoi(n));
