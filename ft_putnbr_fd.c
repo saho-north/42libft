@@ -6,23 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:55:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 22:54:27 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/23 23:17:16 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-ft_putnbr_fd	与えられたファイルディスクリプタに数値 'n' を出力。
-
-Parameters
-n:  The integer to output.
-fd:  The file descriptor on which to write.
-
-Description
-Outputs the integer ’n’ to the given file
-descriptor.
-*/
 
 static void	putnbr_rec(long long num, int fd)
 {
