@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/21 00:10:59 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:11:54 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,61 +23,67 @@ int	is_charset(char c, char const *charset)
 	return (0);
 }
 
-void	trimmer(char const *str, char const *charset, char *dest,
-		size_t dest_len)
+size_t	get_trimmed_len(char const *s1, char const *set, size_t len,
+		size_t start)
 {
-	while (*str && is_charset(*str, charset))
-		str++;
-	while (*str && dest_len > 0)
+	size_t	end;
+
+	end = len;
+	while (end > start && is_charset(s1[end - 1], set))
 	{
-		*dest = *str;
-		dest++;
-		str++;
-		dest_len--;
+		end--;
 	}
+	return (end - start);
 }
 
-size_t	trimmed_strlen(char const *s1, char const *set)
+size_t	get_start_index(char const *s1, char const *set, size_t len)
 {
-	size_t	dest_len;
-	int		in_word_flag;
+	size_t	start;
 
-	dest_len = 0;
-	in_word_flag = 0;
-	while (*s1)
+	start = 0;
+	while (start < len && is_charset(s1[start], set))
 	{
-		if (!in_word_flag && !is_charset(*s1, set))
-			in_word_flag = 1;
-		if (in_word_flag && !is_charset(*s1, set))
-			dest_len++;
-		else if (in_word_flag && is_charset(*s1, set))
-			break ;
-		s1++;
+		start++;
 	}
-	return (dest_len);
+	return (start);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*dest;
-	size_t	dest_len;
+	size_t	src_len;
+	size_t	dst_len;
+	size_t	start;
 
 	if (!s1 || !set)
 		return (0);
-	dest_len = trimmed_strlen(s1, set);
-	dest = (char *)malloc(dest_len + 1);
+	src_len = ft_strlen(s1);
+	start = get_start_index(s1, set, src_len);
+	dst_len = get_trimmed_len(s1, set, src_len, start) + 1;
+	dest = (char *)malloc(dst_len);
 	if (!dest)
 		return (0);
-	trimmer(s1, set, dest, dest_len);
-	dest[dest_len] = '\0';
+	ft_strlcpy(dest, &s1[start], dst_len);
+	dest[dst_len] = '\0';
 	return (dest);
 }
+
+// void	check_strtrim(char *str, char *charset)
+// {
+// 	char	*trimmed_str;
+
+// 	trimmed_str = ft_strtrim(str, charset);
+// 	if (trimmed_str)
+// 	{
+// 		printf("Result : %s\n", trimmed_str);
+// 		free(trimmed_str);
+// 	}
+// }
 
 // int	main(void)
 // {
 // 	char	*str;
 // 	char	*charset;
-// 	char	*trimmed_str;
 // 	char	*str1;
 // 	char	*charset1;
 // 	char	*str2;
@@ -91,52 +97,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // 	str = "*-*-*ABC*-*-*";
 // 	charset = "*-";
-// 	trimmed_str = ft_strtrim(str, charset);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
-// 	// Additional test cases
+// 	check_strtrim(str, charset);
 // 	str1 = "   hello    ";
 // 	charset1 = " ";
-// 	trimmed_str = ft_strtrim(str1, charset1);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
+// 	check_strtrim(str1, charset1);
 // 	str2 = "!!!123!!!";
 // 	charset2 = "!";
-// 	trimmed_str = ft_strtrim(str2, charset2);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
+// 	check_strtrim(str2, charset2);
 // 	str3 = "abcdefg";
 // 	charset3 = "hijklmno";
-// 	trimmed_str = ft_strtrim(str3, charset3);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
+// 	check_strtrim(str3, charset3);
 // 	str4 = "12345";
 // 	charset4 = "12345";
-// 	trimmed_str = ft_strtrim(str4, charset4);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
+// 	check_strtrim(str4, charset4);
 // 	str5 = "";
 // 	charset5 = "";
-// 	trimmed_str = ft_strtrim(str5, charset5);
-// 	if (trimmed_str)
-// 	{
-// 		printf("%s\n", trimmed_str);
-// 		free(trimmed_str);
-// 	}
+// 	check_strtrim(str5, charset5);
 // 	return (0);
 // }
