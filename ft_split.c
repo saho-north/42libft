@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/20 19:22:33 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 00:35:32 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 size_t	count_strs(const char *str, char delimiter)
 {
 	size_t	head_count;
-	int		in_words_flag;
+	bool	in_words_flag;
 
 	head_count = 0;
-	in_words_flag = 0;
+	in_words_flag = false;
 	while (*str != '\0')
 	{
 		if (!in_words_flag && *str != delimiter)
 		{
-			in_words_flag = 1;
+			in_words_flag = true;
 			head_count++;
 		}
 		else if (in_words_flag && *str == delimiter)
-			in_words_flag = 0;
+			in_words_flag = false;
 		str++;
 	}
 	return (head_count);
@@ -45,7 +45,7 @@ size_t	not_delimiter_strlen(const char *str, char delimiter)
 	return (len);
 }
 
-void	after_failed_malloc(char **dest, size_t str_no)
+void	free_failed_malloc(char **dest, size_t str_no)
 {
 	size_t	index;
 
@@ -75,7 +75,7 @@ char	**splitter(const char *str, char delimiter, char **dest,
 			dest[str_no] = (char *)malloc(sizeof(char) * (str_len + 1));
 			if (!dest[str_no])
 			{
-				after_failed_malloc(dest, str_no - 1);
+				free_failed_malloc(dest, str_no - 1);
 				return (0);
 			}
 			index = 0;
@@ -94,15 +94,23 @@ char	**ft_split(char const *str, char delimiter)
 	size_t	head_count;
 
 	if (!str || !delimiter)
-		return (0);
+		return (NULL);
+	if (*str == '\0' && delimiter != '\0')
+	{
+		dest = (char **)malloc(sizeof(char *) * 1);
+		if (!dest)
+			return (NULL);
+		dest[0] = NULL;
+		return (dest);
+	}
 	head_count = count_strs(str, delimiter);
 	dest = (char **)malloc(sizeof(char *) * (head_count + 1));
 	if (!dest)
-		return (0);
+		return (NULL);
 	dest = splitter(str, delimiter, dest, head_count);
 	if (!dest)
-		return (0);
-	dest[head_count] = 0;
+		return (NULL);
+	dest[head_count] = NULL;
 	return (dest);
 }
 
@@ -117,43 +125,44 @@ char	**ft_split(char const *str, char delimiter)
 // 	free(arr);
 // }
 
+// void	test_split(char *str, char delimiter)
+// {
+// 	char	**ans;
+// 	size_t	i;
+
+// 	ans = ft_split(str, delimiter);
+// 	if (ans == NULL)
+// 	{
+// 		printf("ft_split returned NULL\n");
+// 		return ;
+// 	}
+// 	i = 0;
+// 	while (ans[i])
+// 	{
+// 		printf("%s\n", ans[i]);
+// 		i++;
+// 	}
+// 	printf("\n");
+// 	free_split(ans);
+// }
+
 // int	main(void)
 // {
 // 	char	*str;
 // 	char	delimiter;
-// 	char	**ans;
 
 // 	str = "_hello____world____japan____42____42Tokyo";
 // 	delimiter = '_';
-// 	ans = ft_split(str, delimiter);
-// 	printf("0: %s\n", ans[0]);
-// 	printf("1: %s\n", ans[1]);
-// 	printf("2: %s\n", ans[2]);
-// 	printf("3: %s\n", ans[3]);
-// 	printf("4: %s\n\n", ans[4]);
-// 	free_split(ans);
+// 	test_split(str, delimiter);
 // 	str = "split this string";
 // 	delimiter = ' ';
-// 	ans = ft_split(str, delimiter);
-// 	printf("0: %s\n", ans[0]);
-// 	printf("1: %s\n", ans[1]);
-// 	printf("2: %s\n\n", ans[2]);
-// 	free_split(ans);
+// 	test_split(str, delimiter);
 // 	str = "one|two|three|four|five";
 // 	delimiter = '|';
-// 	ans = ft_split(str, delimiter);
-// 	printf("0: %s\n", ans[0]);
-// 	printf("1: %s\n", ans[1]);
-// 	printf("2: %s\n", ans[2]);
-// 	printf("3: %s\n", ans[3]);
-// 	printf("4: %s\n\n", ans[4]);
-// 	free_split(ans);
+// 	test_split(str, delimiter);
 // 	str = "comma,separated,values";
 // 	delimiter = ',';
-// 	ans = ft_split(str, delimiter);
-// 	printf("0: %s\n", ans[0]);
-// 	printf("1: %s\n", ans[1]);
-// 	printf("2: %s\n", ans[2]);
-// 	free_split(ans);
+// 	test_split(str, delimiter);
+// 	test_split("\0aa\0bbb", '\0');
 // 	return (0);
 // }
