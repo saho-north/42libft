@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 01:44:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/20 17:50:42 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/23 11:54:07 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	buf_size;
 
 	buf = NULL;
+	if (SIZE_MAX / count < size && count > 0 && size > 0)
+	{
+		return (NULL);
+	}
 	buf_size = count * size;
 	buf = (void *)malloc(buf_size);
 	if (!buf)
@@ -26,35 +30,32 @@ void	*ft_calloc(size_t count, size_t size)
 	return (buf);
 }
 
+// void	check_calloc(int no, size_t cnt, size_t size)
+// {
+// 	void	*actual;
+// 	void	*expected;
+
+// 	actual = ft_calloc(cnt, size);
+// 	expected = calloc(cnt, size);
+// 	printf("No. %d actual :%p\nNo. %d expected : %p\nsize = %lu\n\n", no,
+// 			actual, no + 1, expected, cnt * size);
+// }
+
 // int	main(void)
 // {
-// 	size_t	count1;
-// 	size_t	size1;
-// 	int		*array1;
-// 	size_t	count2;
-// 	size_t	size2;
-// 	int		*array2;
-
-// 	// テストケース1: 正常な動作を確認する
-// 	count1 = 5;
-// 	size1 = sizeof(int);
-// 	array1 = (int *)calloc(count1, size1);
-// 	if (!array1)
-// 	{
-// 		for (size_t i = 0; i < count1; i++)
-// 		{
-// 			printf("%d ", array1[i]); // ゼロ初期化されていることを確認
-// 		}
-// 		free(array1);
-// 	}
-// 	printf("\n");
-// 	// テストケース2: サイズが0の場合
-// 	count2 = 10;
-// 	size2 = 0;
-// 	array2 = (int *)calloc(count2, size2);
-// 	if (!array2)
-// 	{
-// 		printf("Allocation failed.\n"); // サイズ0の場合は失敗することを確認
-// 	}
+// 	/* 1,2 */ check_calloc(1, 0, 0);
+// 	/* 3,4 */ check_calloc(3, 1, 0);
+// 	/* 5,6 */ check_calloc(5, 0, 1);
+// 	/* 7,8 */ check_calloc(7, 1, 1);
+// 	/* 9,10 */ check_calloc(9, 42, 1);
+// 	/* 11,12 */ check_calloc(11, 1, 42);
+// 	/* 13,14 */ check_calloc(13, 42, 42);
+// 	/* 15,16 overflow */ check_calloc(15, (size_t)SIZE_MAX / 10 + (size_t)1,
+// 			10);
+// 	/* 17,18 too big 1*/ check_calloc(17, LONG_MAX, 1);
+// 	/* 19,20 too big 2*/ check_calloc(19, ULONG_MAX, 1);
+// 	/* 21,22 too big 3*/ check_calloc(21, SIZE_MAX, 1);
+// 	/* 23,24 very big 1*/ check_calloc(23, INT_MAX, 1);
+// 	/* 25,26 very big 2*/ check_calloc(25, UINT_MAX, 1);
 // 	return (0);
 // }
