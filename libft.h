@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:52:54 by north             #+#    #+#             */
-/*   Updated: 2023/05/23 19:03:04 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/23 20:50:27 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <ctype.h>
+# include <fcntl.h>
 # include <limits.h>
 # include <stdbool.h>
 # include <stdio.h>
@@ -52,5 +53,7 @@ int		ft_toupper(int c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
