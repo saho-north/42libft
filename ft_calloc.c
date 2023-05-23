@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 01:44:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 11:54:07 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 00:53:00 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ void	*ft_calloc(size_t count, size_t size)
 // 	void	*actual;
 // 	void	*expected;
 
-// 	actual = ft_calloc(cnt, size);
+// 	actual = calloc(cnt, size);
 // 	expected = calloc(cnt, size);
 // 	printf("No. %d actual :%p\nNo. %d expected : %p\nsize = %lu\n\n", no,
 // 			actual, no + 1, expected, cnt * size);
+// 	if (actual)
+// 		free(actual);
 // }
 
 // int	main(void)
