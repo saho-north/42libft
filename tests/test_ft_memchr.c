@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_isascii.c                                  :+:      :+:    :+:   */
+/*   test_ft_memchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 15:02:20 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:28:41 by Saho Kitaha      ###   ########.fr       */
+/*   Created: 2023/05/24 18:04:55 by Saho Kitaha       #+#    #+#             */
+/*   Updated: 2023/05/24 18:10:15 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void	test_ft_isascii(int c)
-{
-	int	actual;
-	int	expected;
+char		text[] = "ABCDECFG";
 
-	actual = ft_isascii(c);
-	expected = isascii(c);
-	printf("Character to test: '%c' (%d)\n", (char)c, c);
-	printf("ft_isascii : %d\n", actual);
-	printf("isascii    : %d\n", expected);
-	printf("\n");
+static void	test_ft_memchr(const void *s, int c, size_t n)
+{
+	char	*result1;
+	char	*result2;
+
+	result1 = (char *)ft_memchr(s, c, n);
+	result2 = (char *)memchr(s, c, n);
+	printf("ft_memchr  %c in %s : %s\n", c, s, result1);
+	printf("memchr     %c in %s : %s\n", c, s, result2);
 }
 
 int	main(void)
 {
-	test_ft_isascii(0);
-	test_ft_isascii(32);
-	test_ft_isascii(65);
-	test_ft_isascii(97);
-	test_ft_isascii(126);
-	test_ft_isascii(-1);
-	test_ft_isascii(128);
-	test_ft_isascii(255);
-	test_ft_isascii(500);
+	test_ft_memchr(text, 'C', 5);
+	test_ft_memchr(text, 'F', 7);
+	test_ft_memchr(text, 'G', 8);
+	test_ft_memchr(text, 'Z', 7);
 	return (0);
 }

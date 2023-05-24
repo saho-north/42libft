@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_calloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:26:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 14:55:24 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:50:04 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

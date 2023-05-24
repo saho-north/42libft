@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:56:48 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 15:02:34 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:28:46 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	test_ft_isalpha(int c)
+static void	test_ft_isalpha(int c)
 {
 	int	actual;
 	int	expected;

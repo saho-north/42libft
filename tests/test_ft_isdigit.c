@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isdigit.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:07:19 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 15:07:41 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:28:35 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	test_ft_isdigit(int c)
+static void	test_ft_isdigit(int c)
 {
 	int	actual;
 	int	expected;

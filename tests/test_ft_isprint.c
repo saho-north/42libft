@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   test_ft_isprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:56:34 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 18:05:16 by Saho Kitaha      ###   ########.fr       */
+/*   Created: 2023/05/24 17:51:30 by Saho Kitaha       #+#    #+#             */
+/*   Updated: 2023/05/24 17:54:24 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+static void	test_ft_isprint(int c)
 {
-	unsigned char	*str;
-	unsigned char	to_find;
-	size_t			i;
+	int	ft_result;
+	int	result;
 
-	str = (unsigned char *)s;
-	to_find = (unsigned char)c;
-	i = 0;
-	while (i < n)
-	{
-		if (str[i] == to_find)
-			return (&str[i]);
-		i++;
-	}
-	return (NULL);
+	ft_result = ft_isprint(c);
+	result = isprint(c);
+	printf("Character: %c\n", c);
+	printf("ft_isprint: %d\n", ft_result);
+	printf("isprint   : %d\n", result);
+	printf("\n");
+}
+
+int	main(void)
+{
+	test_ft_isprint(' ');
+	test_ft_isprint('~');
+	test_ft_isprint('\n');
+	test_ft_isprint('A');
+	test_ft_isprint('$');
+	return (0);
 }

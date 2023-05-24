@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   test_ft_itoa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:56:34 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 18:05:16 by Saho Kitaha      ###   ########.fr       */
+/*   Created: 2023/05/24 17:53:28 by Saho Kitaha       #+#    #+#             */
+/*   Updated: 2023/05/24 18:03:01 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+static void	test_ft_itoa(int num)
 {
-	unsigned char	*str;
-	unsigned char	to_find;
-	size_t			i;
+	char	*str;
 
-	str = (unsigned char *)s;
-	to_find = (unsigned char)c;
-	i = 0;
-	while (i < n)
+	str = ft_itoa(num);
+	printf("Input:   %d\nft_itoa: %s\n\n", num, str);
+	free(str);
+}
+
+int	main(void)
+{
+	int	n;
+
+	test_ft_itoa(12345);
+	test_ft_itoa(-9876);
+	test_ft_itoa(0);
+	test_ft_itoa(INT_MAX);
+	test_ft_itoa(INT_MIN);
+	for (int i = 0; i < 2000; i++)
 	{
-		if (str[i] == to_find)
-			return (&str[i]);
-		i++;
+		n = rand();
+		test_ft_itoa(n);
 	}
-	return (NULL);
+	return (0);
 }

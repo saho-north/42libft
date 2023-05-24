@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_bzero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:14:57 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 14:51:43 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:29:01 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

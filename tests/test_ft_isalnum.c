@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isalnum.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:32:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 14:57:27 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:28:51 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	test_ft_isalnum(int c)
+static void	test_ft_isalnum(int c)
 {
 	int	actual;
 	int	expected;
