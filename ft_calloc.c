@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 01:44:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 13:31:09 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:24:34 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	buf_size = count * size;
 	buf = (void *)malloc(buf_size);
-	if (!buf)
-		return (NULL);
-	ft_bzero(buf, buf_size);
+	if (buf)
+		ft_bzero(buf, buf_size);
 	return (buf);
 }
