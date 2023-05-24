@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 04:17:43 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/23 01:17:45 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:01:52 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,37 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-
-// 	c = 0;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 32;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 65;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 97;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 126;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = -1;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 128;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 255;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	c = 500;
-// 	printf("ft_isascii = %d\n", ft_isascii(c));
-// 	printf("isascii    = %d\n", isascii(c));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:49:10 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 01:16:53 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:24:19 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
-// char	sample1[] = "ABCDEFGH";
-// char	sample2[] = "ABCDEFGH";
-
-// int	main(void)
-// {
-// 	write(1, "ft_bzero = ", 11);
-// 	ft_bzero(sample1, 2);
-// 	for (int i = 0; i < 8; i++)
-// 	{
-// 		write(1, &sample1[i], 1);
-// 	}
-// 	write(1, "\n", 1);
-// 	write(1, "bzero    = ", 11);
-// 	bzero(sample2, 2);
-// 	for (int i = 0; i < 8; i++)
-// 	{
-// 		write(1, &sample2[i], 1);
-// 	}
-// 	write(1, "\n", 1);
-// }

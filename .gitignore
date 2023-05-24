@@ -55,5 +55,3 @@ dkms.conf
 libft-tester-tokyo
 
 *.txt
-test_ft_*.c
-/tests/
