@@ -6,42 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:18:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 13:02:19 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 05:30:03 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Prototype
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-
-Parameters
-s:  The string from which to create the substring.
-start:  The start index of the substr in the string ’s’.
-len:  The maximum length of the substring.
-
-Return value
-The substring.
-NULL if the allocation fails.
-
-Description
-Allocates (with malloc(3)) and returns a substring from the string ’s’.
-The substr begins at index ’start’ and is of maximum size ’len’.
-
-[例外処理]
-1. 文字列 `s` が `NULL` の時は，`NULL` をリターンする．
-2.`len==0の時およびstart>=ft_strlen(s)の場合は空の文字列を返す。
-3. lenが長すぎてsの終わりを超える場合は、sの最後まで抽出した文字列を返す。
-
-
-文字列strの部分文字列を半開区間［begin, end）で考えるとき、
-ft_substr(str, begin - str, end	- begin)で部分文字列を作れる。
-特に、begin == strのとき、ft_substr(begin, 0, end - begin)
-
-ft_substr("文字列",<returnする文字列の開始インデックス>, <returnする文字列の文字数>)
-ft_substr("aiueo", 2, 2) => ue
-*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -73,18 +42,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main(void)
 // {
-// 	const char		*str;
-// 	unsigned int	start;
-// 	size_t			len;
-// 	char			*sub;
+// 	char	*sub;
 
-// 	str = "Hello, world!";
-// 	start = 7;
-// 	len = 5;
-// 	sub = ft_substr(str, start, len);
+// 	sub = ft_substr("tripouille", 0, 42000);
 // 	if (sub)
 // 	{
-// 		printf("%s\n", sub); // "world" を表示
+// 		printf("%s\n", sub);
 // 		free(sub);
 // 	}
 // 	return (0);

@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:50:35 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/22 12:08:05 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 03:50:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_nbrlen(long long nbr)
+static size_t	get_nbrlen(long long nbr)
 {
 	size_t	nbrlen;
 

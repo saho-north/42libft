@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 17:23:42 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/22 22:32:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 03:50:51 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	move_from_end(char *ptrdest, char *ptrsrc, size_t len)
+static void	move_from_end(char *ptrdest, char *ptrsrc, size_t len)
 {
 	while (len > 0)
 	{
@@ -22,7 +22,7 @@ void	move_from_end(char *ptrdest, char *ptrsrc, size_t len)
 	}
 }
 
-void	move_from_start(char *ptrdest, char *ptrsrc, size_t len)
+static void	move_from_start(char *ptrdest, char *ptrsrc, size_t len)
 {
 	size_t	index;
 

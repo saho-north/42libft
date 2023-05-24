@@ -6,24 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:51:48 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 19:01:46 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 03:51:57 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Parameters
-
-s:  The string on which to iterate.
-f:  The function to apply to each character.
-
-Description
-
-Applies the function ’f’ on each character of the string passed as argument,
-passing its index as first argument. Each character is passed by
-address to ’f’ to be modified if necessary.
-*/
 
 // void	my_function(unsigned int i, char *c)
 // {

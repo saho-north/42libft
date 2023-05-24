@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 15:11:54 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 04:15:55 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_charset(char c, char const *charset)
+static int	is_charset(char c, char const *charset)
 {
 	while (*charset)
 	{
@@ -23,7 +23,7 @@ int	is_charset(char c, char const *charset)
 	return (0);
 }
 
-size_t	get_trimmed_len(char const *s1, char const *set, size_t len,
+static size_t	get_trimmed_len(char const *s1, char const *set, size_t len,
 		size_t start)
 {
 	size_t	end;
@@ -36,7 +36,7 @@ size_t	get_trimmed_len(char const *s1, char const *set, size_t len,
 	return (end - start);
 }
 
-size_t	get_start_index(char const *s1, char const *set, size_t len)
+static size_t	get_start_index(char const *s1, char const *set, size_t len)
 {
 	size_t	start;
 

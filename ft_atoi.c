@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/23 23:44:55 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 04:15:57 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	convert_num(const char *str, bool sign)
+static long long	convert_num(const char *str, bool sign)
 {
 	long long	ov_div;
 	long long	ov_mod;
@@ -56,6 +56,22 @@ int	ft_atoi(const char *str)
 	return ((int)num);
 }
 
+// void	test_ft_atoi(char *str)
+// {
+// 	int	actual;
+// 	int	expected;
+
+// 	actual = ft_atoi(str);
+// 	expected = atoi(str);
+// 	printf("str: %s\n", str);
+// 	printf("actual: %d\n", actual);
+// 	printf("expected: %d\n", expected);
+// 	if (actual == expected)
+// 		printf("OK\n");
+// 	else
+// 		printf("NG\n");
+// }
+
 // int	main(void)
 // {
 // 	char	*str1;
@@ -68,9 +84,9 @@ int	ft_atoi(const char *str)
 // 	char	*str8;
 // 	char	*str9;
 // 	char	*str10;
-// 	char	*n;
 // 	char	*str11;
 // 	char	*str12;
+// 	char	*str13;
 
 // 	str1 = "22119223372036854775807";
 // 	str2 = "     -2147483648";
@@ -84,45 +100,19 @@ int	ft_atoi(const char *str)
 // 	str10 = "18446744073709551614";
 // 	str11 = "9223372036854775806";
 // 	str12 = "-9223372036854775807";
-// 	n = "\e06050";
-// 	printf("0.  %s\n", n);
-// 	printf("ft_atoi = %d\n", ft_atoi(n));
-// 	printf("atoi    = %d\n", atoi(n));
-// 	printf("\n1.  %s\n", str1);
-// 	printf("ft_atoi = %d\n", ft_atoi(str1));
-// 	printf("atoi    = %d\n\n", atoi(str1));
-// 	printf("2.  %s\n", str2);
-// 	printf("ft_atoi = %d\n", ft_atoi(str2));
-// 	printf("atoi    = %d\n\n", atoi(str2));
-// 	printf("3.  %s\n", str3);
-// 	printf("ft_atoi = %d\n", ft_atoi(str3));
-// 	printf("atoi    = %d\n\n", atoi(str3));
-// 	printf("4.  %s\n", str4);
-// 	printf("ft_atoi = %d\n", ft_atoi(str4));
-// 	printf("atoi    = %d\n\n", atoi(str4));
-// 	printf("5.  %s\n", str5);
-// 	printf("ft_atoi = %d\n", ft_atoi(str5));
-// 	printf("atoi    = %d\n\n", atoi(str5));
-// 	printf("6.  %s\n", str6);
-// 	printf("ft_atoi = %d\n", ft_atoi(str6));
-// 	printf("atoi    = %d\n\n", atoi(str6));
-// 	printf("7.  %s\n", str7);
-// 	printf("ft_atoi = %d\n", ft_atoi(str7));
-// 	printf("atoi    = %d\n\n", atoi(str7));
-// 	printf("8.  %s\n", str8);
-// 	printf("ft_atoi = %d\n", ft_atoi(str8));
-// 	printf("atoi    = %d\n\n", atoi(str8));
-// 	printf("9.  %s\n", str9);
-// 	printf("ft_atoi = %d\n", ft_atoi(str9));
-// 	printf("atoi    = %d\n\n", atoi(str9));
-// 	printf("10. %s\n", str10);
-// 	printf("ft_atoi = %d\n", ft_atoi(str10));
-// 	printf("atoi    = %d\n\n", atoi(str10));
-// 	printf("11. %s\n", str11);
-// 	printf("ft_atoi = %d\n", ft_atoi(str11));
-// 	printf("atoi    = %d\n\n", atoi(str11));
-// 	printf("12. %s\n", str12);
-// 	printf("ft_atoi = %d\n", ft_atoi(str12));
-// 	printf("atoi    = %d\n\n", atoi(str12));
+// 	str13 = "\e06050";
+// 	test_ft_atoi(str1);
+// 	test_ft_atoi(str2);
+// 	test_ft_atoi(str3);
+// 	test_ft_atoi(str4);
+// 	test_ft_atoi(str5);
+// 	test_ft_atoi(str6);
+// 	test_ft_atoi(str7);
+// 	test_ft_atoi(str8);
+// 	test_ft_atoi(str9);
+// 	test_ft_atoi(str10);
+// 	test_ft_atoi(str11);
+// 	test_ft_atoi(str12);
+// 	test_ft_atoi(str13);
 // 	return (0);
 // }

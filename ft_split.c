@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 00:35:32 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/24 04:26:32 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_strs(const char *str, char delimiter)
+static size_t	count_strs(const char *str, char delimiter)
 {
 	size_t	head_count;
 	bool	in_words_flag;
@@ -33,7 +33,7 @@ size_t	count_strs(const char *str, char delimiter)
 	return (head_count);
 }
 
-size_t	not_delimiter_strlen(const char *str, char delimiter)
+static size_t	not_delimiter_strlen(const char *str, char delimiter)
 {
 	size_t	len;
 
@@ -45,7 +45,7 @@ size_t	not_delimiter_strlen(const char *str, char delimiter)
 	return (len);
 }
 
-void	free_failed_malloc(char **dest, size_t str_no)
+static void	free_failed_malloc(char **dest, size_t str_no)
 {
 	size_t	index;
 
@@ -58,7 +58,7 @@ void	free_failed_malloc(char **dest, size_t str_no)
 	free(dest);
 }
 
-char	**splitter(const char *str, char delimiter, char **dest,
+static char	**splitter(const char *str, char delimiter, char **dest,
 		size_t head_count)
 {
 	size_t	str_no;
@@ -93,7 +93,7 @@ char	**ft_split(char const *str, char delimiter)
 	char	**dest;
 	size_t	head_count;
 
-	if (!str || !delimiter)
+	if (!str)
 		return (NULL);
 	if (*str == '\0' && delimiter != '\0')
 	{
@@ -113,6 +113,17 @@ char	**ft_split(char const *str, char delimiter)
 	dest[head_count] = NULL;
 	return (dest);
 }
+
+/*
+TR: "_"
+SEP: '\0'
+Your ft_split returned a tab of the following strings:
+Your ft_split returned a "NULL" str_tab
+
+My ft_split returned:
+0: "_"
+1: (null)
+*/
 
 // void	free_split(char **arr)
 // {
