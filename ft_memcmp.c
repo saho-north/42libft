@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:24:37 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 18:11:02 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/25 15:54:01 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

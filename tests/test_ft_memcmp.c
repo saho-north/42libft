@@ -3,36 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:11:08 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/24 18:14:22 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/25 15:54:03 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	test_ft_memcmp(char *s1, char *s2, size_t n)
+static void	test_ft_memcmp(const char *s1, const char *s2, size_t n)
 {
 	const void	*str1;
 	const void	*str2;
 
 	str1 = (const void *)s1;
 	str2 = (const void *)s2;
-	printf("memcmp    : %s - %s = %d\n", memcmp(str1, str2, 2));
-	printf("ft_memcmp : %s - %s = %d\n\n", ft_memcmp(str1, str2, 2));
+	printf("[%s] - [%s] (%zu)\n", s1, s2, n);
+	printf("ft_memcmp : %d\n", ft_memcmp(str1, str2, n));
+	printf("memcmp    : %d\n\n", memcmp(str1, str2, n));
 }
 
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
-	char	*str3;
-	char	*str4;
-	char	*str5;
-	char	*str6;
-	char	*str7;
-	char	*str8;
+	const char	*str1;
+	const char	*str2;
+	const char	*str3;
+	const char	*str4;
+	const char	*str5;
+	const char	*str6;
+	const char	*str7;
+	const char	*str8;
 
 	str1 = "ABC";
 	str2 = "ABD";
@@ -42,23 +43,13 @@ int	main(void)
 	str6 = "B";
 	str7 = "A";
 	str8 = "";
-	printf("memcmp    : %s - %s   = %d\n", memcmp(str1, str2, 2));
-	printf("ft_memcmp : %s - %s   = %d\n\n", ft_memcmp(str1, str2, 2));
-	printf("memcmp    : ABC ABC   = %d\n", memcmp(str1, str1, 10));
-	printf("ft_memcmp : ABC ABC   = %d\n\n", ft_memcmp(str1, str1, 10));
-	printf("memcmp    : ABC: AAA   = %d\n", memcmp(str1, str3, 2));
-	printf("ft_memcmp : ABC: AAA   = %d\n\n", ft_memcmp(str1, str3, 2));
-	printf("memcmp    : ABC: ABCD  = %d\n", memcmp(str1, str4, 2));
-	printf("ft_memcmp : ABC: ABCD  = %d\n\n", ft_memcmp(str1, str4, 2));
-	printf("memcmp    : ABC: AB    = %d\n", memcmp(str1, str5, 2));
-	printf("ft_memcmp : ABC: AB    = %d\n\n", ft_memcmp(str1, str5, 2));
-	printf("memcmp    : ABC: B     = %d\n", memcmp(str1, str6, 2));
-	printf("ft_memcmp : ABC: B     = %d\n\n", ft_memcmp(str1, str6, 2));
-	printf("memcmp    : ABC: A     = %d\n", memcmp(str1, str7, 2));
-	printf("ft_memcmp : ABC: A     = %d\n\n", ft_memcmp(str1, str7, 2));
-	printf("memcmp    : ABC: \"\"    = %d\n", memcmp(str1, str8, 2));
-	printf("ft_memcmp : ABC: \"\"    = %d\n\n", ft_memcmp(str1, str8, 2));
-	printf("memcmp    : ABC: ABD   = %d\n", memcmp(str1, str2, 0));
-	printf("ft_memcmp : ABC: ABD   = %d\n", ft_memcmp(str1, str2, 0));
+	test_ft_memcmp(str1, str1, 3);
+	test_ft_memcmp(str1, str2, 0);
+	test_ft_memcmp(str1, str3, 2);
+	test_ft_memcmp(str1, str4, 2);
+	test_ft_memcmp(str1, str5, 2);
+	test_ft_memcmp(str1, str6, 2);
+	test_ft_memcmp(str1, str7, 2);
+	test_ft_memcmp(str1, str8, 2);
 	return (0);
 }

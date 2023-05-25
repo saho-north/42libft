@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:57:37 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 05:07:54 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:30:39 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,33 +29,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// char	src[] = "ABCDEFG";
-// char	dst1[] = "aaaaaaaaaaa";
-// char	dst2[] = "aaaaaaaaaaa";
-// char	dst3[] = "aaaaaaaaaaa";
-// char	dst4[] = "aaaaaaaaaaa";
-// char	dst5[] = "aaaaaaaaaaa";
-// char	dst6[] = "aaaaaaaaaaa";
-// char	dst7[] = "aaaaaaaaaaa";
-// char	dst8[] = "aaaaaaaaaaa";
-// char	dst9[] = "aaaaaaaaaaa";
-// char	dst10[] = "aaaaaaaaaaa";
-
-// int	main(void)
-// {
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst1, src, 3));
-// 	printf("memcpy    = %s\n\n", (char *)memcpy(dst2, src, 3));
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst3, src, 7));
-// 	printf("memcpy    = %s\n\n", (char *)memcpy(dst4, src, 7));
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst5, src, 0));
-// 	printf("memcpy    = %s\n\n", (char *)memcpy(dst6, src, 0));
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst7, src, 10));
-// 	printf("memcpy    = %s\n\n", (char *)memcpy(dst8, src, 10));
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(dst9, src, 5));
-// 	printf("memcpy    = %s\n", (char *)memcpy(dst10, src, 5));
-// 	printf("failed test ->>>\n");
-// 	printf("ft_memcpy = %s\n", (char *)ft_memcpy(((void *)0), ((void *)0), 3));
-// 	printf("memcpy    = %s\n", (char *)memcpy(((void *)0), ((void *)0), 3));
-// 	return (0);
-// }

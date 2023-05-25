@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 04:26:32 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:03:56 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	not_delimiter_strlen(const char *str, char delimiter)
 	return (len);
 }
 
-static void	free_failed_malloc(char **dest, size_t str_no)
+static void	*free_failed_malloc(char **dest, size_t str_no)
 {
 	size_t	index;
 
@@ -56,6 +56,7 @@ static void	free_failed_malloc(char **dest, size_t str_no)
 		index++;
 	}
 	free(dest);
+	return (NULL);
 }
 
 static char	**splitter(const char *str, char delimiter, char **dest,
@@ -74,16 +75,14 @@ static char	**splitter(const char *str, char delimiter, char **dest,
 			str_len = not_delimiter_strlen(str, delimiter);
 			dest[str_no] = (char *)malloc(sizeof(char) * (str_len + 1));
 			if (!dest[str_no])
-			{
-				free_failed_malloc(dest, str_no - 1);
-				return (0);
-			}
+				return (free_failed_malloc(dest, str_no - 1));
 			index = 0;
 			while (*str && *str != delimiter)
 				dest[str_no][index++] = *(str++);
 			dest[str_no++][index] = '\0';
 		}
-		str++;
+		else
+			str++;
 	}
 	return (dest);
 }
@@ -113,67 +112,3 @@ char	**ft_split(char const *str, char delimiter)
 	dest[head_count] = NULL;
 	return (dest);
 }
-
-/*
-TR: "_"
-SEP: '\0'
-Your ft_split returned a tab of the following strings:
-Your ft_split returned a "NULL" str_tab
-
-My ft_split returned:
-0: "_"
-1: (null)
-*/
-
-// void	free_split(char **arr)
-// {
-// 	size_t	i;
-
-// 	if (!arr)
-// 		return ;
-// 	for (i = 0; arr[i]; i++)
-// 		free(arr[i]);
-// 	free(arr);
-// }
-
-// void	test_split(char *str, char delimiter)
-// {
-// 	char	**ans;
-// 	size_t	i;
-
-// 	ans = ft_split(str, delimiter);
-// 	if (ans == NULL)
-// 	{
-// 		printf("ft_split returned NULL\n");
-// 		return ;
-// 	}
-// 	i = 0;
-// 	while (ans[i])
-// 	{
-// 		printf("%s\n", ans[i]);
-// 		i++;
-// 	}
-// 	printf("\n");
-// 	free_split(ans);
-// }
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	char	delimiter;
-
-// 	str = "_hello____world____japan____42____42Tokyo";
-// 	delimiter = '_';
-// 	test_split(str, delimiter);
-// 	str = "split this string";
-// 	delimiter = ' ';
-// 	test_split(str, delimiter);
-// 	str = "one|two|three|four|five";
-// 	delimiter = '|';
-// 	test_split(str, delimiter);
-// 	str = "comma,separated,values";
-// 	delimiter = ',';
-// 	test_split(str, delimiter);
-// 	test_split("\0aa\0bbb", '\0');
-// 	return (0);
-// }

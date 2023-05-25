@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_ft_strchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/21 00:51:48 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 17:06:58 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/25 16:58:53 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/05/25 17:01:25 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+static void	test_ft_strchr(char *str, char c)
 {
-	size_t	i;
+	printf("ft_strchr for %c : %p\n", c, ft_strchr(str, c));
+	printf("strchr    for %c : %p\n\n", c, strchr(str, c));
+}
 
-	i = 0;
-	while (s[i])
+int	main(void)
+{
+	const char	*str;
+	char		c;
+
+	str = "ABCDEFG";
+	for (int i = 0; i < 5; i++)
 	{
-		f(i, &s[i]);
-		i++;
+		c = 'A' + i;
+		test_ft_strchr(str, c);
 	}
+	c = '\0';
+	test_ft_strchr(str, c);
+	return (0);
 }

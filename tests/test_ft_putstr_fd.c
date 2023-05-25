@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_ft_putstr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/21 00:51:48 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 17:06:58 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/25 05:14:12 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/05/25 06:10:51 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	main(void)
 {
-	size_t	i;
+	int		fd;
+	char	*str;
 
-	i = 0;
-	while (s[i])
+	str = "aaaaa.";
+	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+	if (fd != -1)
 	{
-		f(i, &s[i]);
-		i++;
+		ft_putstr_fd(str, fd);
+		close(fd);
 	}
+	return (0);
 }
