@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:11:08 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/25 15:54:03 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 00:15:06 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void	test_ft_memcmp(const char *s1, const char *s2, size_t n)
+static void	test_ft_memcmp(char *s1, char *s2, size_t n)
 {
 	const void	*str1;
 	const void	*str2;
@@ -26,14 +26,13 @@ static void	test_ft_memcmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	const char	*str1;
-	const char	*str2;
-	const char	*str3;
-	const char	*str4;
-	const char	*str5;
-	const char	*str6;
-	const char	*str7;
-	const char	*str8;
+	char	*str1;
+	char	*str2;
+	char	*str3;
+	char	*str4;
+	char	*str5;
+	char	*str6;
+	char	*str7;
 
 	str1 = "ABC";
 	str2 = "ABD";
@@ -42,7 +41,6 @@ int	main(void)
 	str5 = "AB";
 	str6 = "B";
 	str7 = "A";
-	str8 = "";
 	test_ft_memcmp(str1, str1, 3);
 	test_ft_memcmp(str1, str2, 0);
 	test_ft_memcmp(str1, str3, 2);
@@ -50,6 +48,6 @@ int	main(void)
 	test_ft_memcmp(str1, str5, 2);
 	test_ft_memcmp(str1, str6, 2);
 	test_ft_memcmp(str1, str7, 2);
-	test_ft_memcmp(str1, str8, 2);
+	//test_ft_memcmp(str1, "", 2);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 21:34:28 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 01:00:10 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	src_len = ft_strlen(s1);
 	start = get_start_index(s1, set, src_len);
-	dst_len = get_trimmed_len(s1, set, src_len, start) + 1;
-	dest = (char *)malloc(dst_len);
+	dst_len = get_trimmed_len(s1, set, src_len, start);
+	dest = (char *)malloc(dst_len + 1);
 	if (!dest)
 		return (0);
-	ft_strlcpy(dest, &s1[start], dst_len);
-	dest[dst_len] = '\0';
+	ft_strlcpy(dest, &s1[start], dst_len + 1);
 	return (dest);
 }

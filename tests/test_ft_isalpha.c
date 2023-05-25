@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:56:48 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:28:46 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 00:04:05 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	main(void)
 	test_ft_isalpha('e');
 	test_ft_isalpha('A');
 	test_ft_isalpha('?');
-	return (1);
+	return (0);
 }

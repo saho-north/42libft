@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 20:53:03 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 20:59:18 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 00:43:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ const char	*str8 = "\0";
 
 static void	test_ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	printf("[%s] vs [%s]\n", s1, s2);
+	printf("[%s] vs [%s] for size %zu\n", s1, s2, n);
 	printf("ft_strncmp : %d\n", ft_strncmp(s1, s2, n));
 	printf("strncmp    : %d\n\n", strncmp(s1, s2, n));
 }

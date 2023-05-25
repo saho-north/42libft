@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_itoa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 17:53:28 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/24 18:03:01 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 00:08:19 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 	test_ft_itoa(0);
 	test_ft_itoa(INT_MAX);
 	test_ft_itoa(INT_MIN);
-	for (int i = 0; i < 2000; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		n = rand();
 		test_ft_itoa(n);

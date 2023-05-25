@@ -6,9 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 21:34:39 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 21:45:14 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 01:00:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 void	test_ft_strtrim(char *str, char *charset)
 {
@@ -19,8 +21,8 @@ void	test_ft_strtrim(char *str, char *charset)
 	s = (const char *)str;
 	set = (const char *)charset;
 	result = ft_strtrim(s, set);
-	printf("[%s] is to be trimmed by [%s]", str, charset);
-	printf("ft_strtrim  : %s\n", result ? result : "NULL");
+	printf("[%s] by [%s]\n", str, charset);
+	printf("ft_strtrim  : %s\n\n", result ? result : "NULL");
 	free(result);
 }
 

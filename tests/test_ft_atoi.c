@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:00:00 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:29:03 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 00:04:36 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	test_ft_atoi(char *str)
 
 	actual = ft_atoi(str);
 	expected = atoi(str);
-	printf("original : %s\n", str);
+	printf("input    : %s\n", str);
 	printf("actual   : %d\n", actual);
 	printf("expected : %d\n", expected);
 	if (actual == expected)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 17:51:30 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/24 17:54:24 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 00:06:29 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static void	test_ft_isprint(int c)
 
 	ft_result = ft_isprint(c);
 	result = isprint(c);
-	printf("Character: %c\n", c);
-	printf("ft_isprint: %d\n", ft_result);
-	printf("isprint   : %d\n", result);
+	printf("Character  : %c\n", c);
+	printf("ft_isprint : %d\n", ft_result);
+	printf("isprint    : %d\n", result);
 	printf("\n");
 }
 

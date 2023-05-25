@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_bzero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:14:57 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:29:01 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 00:04:43 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ static void	test_ft_bzero(char *str1, char *str2, size_t n)
 int	main(void)
 {
 	test_ft_bzero(sample1, sample2, 2);
+	return (0);
 }

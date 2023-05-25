@@ -24,63 +24,105 @@ fclean: clean
 re: fclean all
 
 atoi: ft_atoi.c ./tests/test_ft_atoi.c
-	$(CC) $^ $(DEBUG) -o atoi
+	$(CC) $^ $(DEBUG)
 
 bzero: ft_bzero.c ./tests/test_ft_bzero.c
-	$(CC) $^ $(DEBUG) -o bzero
+	$(CC) $^ $(DEBUG)
 
 calloc: ft_calloc.c ft_bzero.c ./tests/test_ft_calloc.c
-	$(CC) $^ $(DEBUG) -o calloc
+	$(CC) $^ $(DEBUG)
 
 isalnum: ft_isalnum.c ./tests/test_ft_isalnum.c
-	$(CC) $^ $(DEBUG) -o isalnum
+	$(CC) $^ $(DEBUG)
 
 isalpha: ft_isalpha.c ./tests/test_ft_isalpha.c
-	$(CC) $^ $(DEBUG) -o isalpha
+	$(CC) $^ $(DEBUG)
 
 isascii: ft_isascii.c ./tests/test_ft_isascii.c
-	$(CC) $^ $(DEBUG) -o isascii
+	$(CC) $^ $(DEBUG)
 
 isdigit: ft_isdigit.c ./tests/test_ft_isdigit.c
-	$(CC) $^ $(DEBUG) -o isdigit
+	$(CC) $^ $(DEBUG)
 
 isprint: ft_isprint.c ./tests/test_ft_isprint.c
-	$(CC) $^ $(DEBUG) -o isprint
+	$(CC) $^ $(DEBUG)
 
 itoa: ft_itoa.c ./tests/test_ft_itoa.c
-	$(CC) $^ $(DEBUG) -o itoa
+	$(CC) $^ $(DEBUG)
 
 memchr: ft_memchr.c ./tests/test_ft_memchr.c
-	$(CC) $^ $(DEBUG) -o memchr
+	$(CC) $^ $(DEBUG)
 
 memcmp: ft_memcmp.c ./tests/test_ft_memcmp.c
-	$(CC) $^ $(DEBUG) -o memcmp
+	$(CC) $^ $(DEBUG)
 
 memcpy: ft_memcpy.c ./tests/test_ft_memcpy.c
-	$(CC) $^ $(DEBUG) -o memcpy
+	$(CC) $^ $(DEBUG)
 
 memmove: ft_memmove.c ./tests/test_ft_memmove.c
-	$(CC) $^ $(DEBUG) -o memmove
+	$(CC) $^ $(DEBUG)
 
 memset: ft_memset.c ./tests/test_ft_memset.c
-	$(CC) $^ $(DEBUG) -o memset
+	$(CC) $^ $(DEBUG)
 
 putchar: ft_putchar_fd.c ./tests/test_ft_putchar_fd.c
-	$(CC) $^ $(DEBUG) -o putchar
+	$(CC) $^ $(DEBUG)
 
 putendl: ft_putendl_fd.c ./tests/test_ft_putendl_fd.c
-	$(CC) $^ $(DEBUG) -o putendl
+	$(CC) $^ $(DEBUG)
 
 putnbr: ft_putnbr_fd.c ./tests/test_ft_putnbr_fd.c
-	$(CC) $^ $(DEBUG) -o putnbr
+	$(CC) $^ $(DEBUG)
 
 putstr: ft_putstr_fd.c ./tests/test_ft_putstr_fd.c
-	$(CC) $^ $(DEBUG) -o putstr
+	$(CC) $^ $(DEBUG)
 
 split: ft_split.c ./tests/test_ft_split.c
-	$(CC) $^ $(DEBUG) -o split
+	$(CC) $^ $(DEBUG)
 
+strchr: ft_strchr.c ./tests/test_ft_strchr.c
+	$(CC) $^ $(DEBUG)
 
+strdup: ft_strdup.c ft_memcpy.c ./tests/test_ft_strdup.c
+	$(CC) $^ $(DEBUG)
 
+striteri: ft_striteri.c ft_strdup.c ft_memcpy.c ./tests/test_ft_striteri.c
+	$(CC) $^ $(DEBUG)
+
+strjoin: ft_strjoin.c ft_strlen.c ./tests/test_ft_strjoin.c
+	$(CC) $^ $(DEBUG)
+
+strlcat: ft_strlcat.c ft_strlen.c ./tests/test_ft_strlcat.c
+	$(CC) $^ $(DEBUG)
+
+strlcpy: ft_strlcpy.c ft_strlen.c ./tests/test_ft_strlcpy.c
+	$(CC) $^ $(DEBUG)
+
+strlen: ft_strlen.c ./tests/test_ft_strlen.c
+	$(CC) $^ $(DEBUG)
+
+strmapi: ft_strmapi.c ft_strlen.c ./tests/test_ft_strmapi.c
+	$(CC) $^ $(DEBUG)
+
+strncmp: ft_strncmp.c ./tests/test_ft_strncmp.c
+	$(CC) $^ $(DEBUG)
+
+strnstr: ft_strnstr.c ./tests/test_ft_strnstr.c
+	$(CC) $^ $(DEBUG)
+
+strrchr: ft_strrchr.c ft_strlen.c ./tests/test_ft_strrchr.c
+	$(CC) $^ $(DEBUG)
+
+strtrim: ft_strtrim.c ft_strlcpy.c ft_strlen.c ./tests/test_ft_strtrim.c
+	$(CC) $^ $(DEBUG)
+
+substr: ft_substr.c ft_strlen.c ./tests/test_ft_substr.c
+	$(CC) $^ $(DEBUG)
+
+tolower: ft_tolower.c ./tests/test_ft_tolower.c
+	$(CC) $^ $(DEBUG)
+
+toupper: ft_toupper.c ./tests/test_ft_toupper.c
+	$(CC) $^ $(DEBUG)
 
 .PHONY: all clean fclean re
