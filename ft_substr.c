@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:18:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 16:08:03 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/25 21:45:58 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = create_substr(&s[start], len);
 	return (substr);
 }
-
-// int	main(void)
-// {
-// 	char	*sub;
-
-// 	sub = ft_substr("tripouille", 0, 42000);
-// 	if (sub)
-// 	{
-// 		printf("%s\n", sub);
-// 		free(sub);
-// 	}
-// 	return (0);
-// }

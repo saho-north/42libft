@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:45:13 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/24 05:08:24 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/25 17:34:51 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (src_len);
 }
-
-// char	buf1[] = "A rabbit of commanding presence";
-// char	s1[] = "Purple Bear";
-// char	buf2[] = "A rabbit of commanding presence";
-// char	s2[] = "Purple Bear";
-
-// int	main(void)
-// {
-// 	printf("strlcpy-----%lu\n", strlcpy(buf1, s1, (size_t)sizeof(buf1)));
-// 	printf("%s\n", buf1);
-// 	printf("\nft_strlcpy--%zu\n", ft_strlcpy(buf2, s2, (size_t)sizeof(buf2)));
-// 	printf("%s\n", buf2);
-// 	printf("\nstrlcpy-----%lu\n", strlcpy(buf1, s1, 30));
-// 	printf("%s\n", buf1);
-// 	printf("\nft_strlcpy--%zu\n", ft_strlcpy(buf2, s2, 30));
-// 	printf("%s\n", buf2);
-// 	return (0);
-// }

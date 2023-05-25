@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   test_ft_tolower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 19:00:53 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/25 21:30:01 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/25 21:47:11 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/05/25 21:50:51 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+static void	test_ft_tolower(int c)
 {
-	char	*str;
-	char	to_find;
-	size_t	len;
+	printf("ft_tolower [%c] -> %d\n", (char)c, ft_tolower(c));
+	printf("tolower    [%c] -> %d\n\n", (char)c, tolower(c));
+}
 
-	str = (char *)s;
-	to_find = (char)c;
-	len = ft_strlen(s) + 1;
-	while (len > 0)
-	{
-		if (str[len - 1] == to_find)
-			return (&str[len - 1]);
-		len--;
-	}
+int	main(void)
+{
+	test_ft_tolower('c');
+	test_ft_tolower('A');
+	test_ft_tolower('0');
+	test_ft_tolower('&');
+	test_ft_tolower(0);
+	test_ft_tolower(' ');
 	return (0);
 }

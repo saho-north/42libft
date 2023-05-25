@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:28:08 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/24 03:53:34 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/25 20:48:16 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	char	*str;
-
-// 	str = "In the quiet of the night, A feline shadow takes its flight,";
-// 	printf("ft_strlen = %lu\n", ft_strlen(str));
-// 	printf("strlen    = %lu\n", strlen(str));
-// 	return (0);
-// }
