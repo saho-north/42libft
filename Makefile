@@ -153,3 +153,7 @@ tolower: ft_tolower.c ./tests/test_ft_tolower.c
 toupper: ft_toupper.c ./tests/test_ft_toupper.c
 	$(CC) $^ $(DEBUG)
 
+lstnew: ft_lstnew_bonus.c ./tests/test_ft_lstnew_bonus.c
+	$(CC) $^ $(DEBUG)
+
+

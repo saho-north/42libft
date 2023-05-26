@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:38:13 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 18:43:33 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/27 02:39:28 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,24 @@ new:  The address of a pointer to the node to be
 added to the list.
 
 Adds the node ’new’ at the end of the list.
+
  */
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	tmp = *lst;
-	if (!lst || !new)
+	if (!new)
 		return ;
-	while (tmp->next)
+	if (!*lst)
+		*lst = new;
+	else
 	{
-		tmp = tmp->next;
+		tmp = *lst;
+		while (tmp->next)
+		{
+			tmp = tmp->next;
+		}
+		tmp->next = new;
 	}
-	tmp->next = new;
 }
