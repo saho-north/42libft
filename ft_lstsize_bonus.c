@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:30:16 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 13:34:32 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:49:40 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_lstsize(t_list *lst)
 {
 	int	lstlen;
 
-	lst = 0;
+	lstlen = 0;
 	if (lst)
 	{
 		while (lst->next)
