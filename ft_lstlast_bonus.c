@@ -6,11 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:35:23 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 17:58:56 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 18:44:09 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 /*
 lst:  The beginning of the list.
