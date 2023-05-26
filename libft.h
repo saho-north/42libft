@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:52:54 by north             #+#    #+#             */
-/*   Updated: 2023/05/26 02:44:33 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/26 14:28:54 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,5 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 #endif
