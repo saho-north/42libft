@@ -7,6 +7,8 @@ OBJS	= $(SRCS:.c=.o)
 BONUS_SRCS	=	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
 INCS	= libft.h
+
+
 ALL_OBJS 	= $(OBJS)
 ifdef ADD_BONUS
 ALL_OBJS	+= $(BONUS_OBJS)
@@ -28,10 +30,10 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
+bonus:
 	make ADD_BONUS=1
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 atoi: ft_atoi.c ./tests/test_ft_atoi.c
 	$(CC) $^ $(DEBUG)
