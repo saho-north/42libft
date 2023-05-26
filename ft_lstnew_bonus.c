@@ -6,26 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:05:15 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 21:22:55 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/27 03:26:37 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-content:  The content to create the node with.
-
-Allocates (with malloc(3)) and returns a new node.
-The member variable ’content’ is initialized with
-the value of the parameter ’content’.  The variable
-’next’ is initialized to NULL.
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
- */
 
 t_list	*ft_lstnew(void *content)
 {
