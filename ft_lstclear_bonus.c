@@ -6,11 +6,11 @@
 /*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:24:52 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 16:26:20 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/05/26 17:58:46 by Saho Kitaha      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 /*
 lst:  The address of a pointer to a node.
