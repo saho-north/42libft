@@ -156,4 +156,26 @@ toupper: ft_toupper.c ./tests/test_ft_toupper.c
 lstnew: ft_lstnew_bonus.c ./tests/test_ft_lstnew_bonus.c
 	$(CC) $^ $(DEBUG)
 
+lstadd_front: ft_lstadd_front_bonus.c  ft_lstnew_bonus.c ./tests/test_ft_lstadd_front_bonus.c
+	$(CC) $^ $(DEBUG)
 
+lstsize: ft_lstsize_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstsize_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstlast: ft_lstlast_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstlast_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstadd_back: ft_lstadd_back_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstadd_back_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstdelone: ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstdelone_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstclear: ft_lstclear_bonus.c ./tests/test_ft_lstclear_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstiter: ft_lstiter_bonus.c ./tests/test_ft_lstiter_bonus.c
+	$(CC) $^ $(DEBUG)
+
+lstmap: ft_lstmap_bonus.c ./tests/test_ft_lstmap_bonus.c
+	$(CC) $^ $(DEBUG)

@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:37:54 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 03:17:21 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/27 04:11:43 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		f(lst);
-		if (lst->next)
-			lst = lst->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
