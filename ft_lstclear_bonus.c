@@ -19,14 +19,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	tmp = *lst;
-	while (tmp)
+    tmp = *lst;
+    while (tmp)
 	{
-		next = tmp->next;
-		del(tmp->content);
-		free(tmp);
+        next = tmp->next;
+        ft_lstdelone(tmp, del);
 		tmp = next;
 	}
-	ft_lstdelone();
 	*lst = 0;
 }

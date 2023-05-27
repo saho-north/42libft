@@ -171,7 +171,7 @@ lstadd_back: ft_lstadd_back_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstadd_bac
 lstdelone: ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstdelone_bonus.c
 	$(CC) $^ $(DEBUG)
 
-lstclear: ft_lstclear_bonus.c ./tests/test_ft_lstclear_bonus.c
+lstclear: ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstclear_bonus.c
 	$(CC) $^ $(DEBUG)
 
 lstiter: ft_lstiter_bonus.c ./tests/test_ft_lstiter_bonus.c

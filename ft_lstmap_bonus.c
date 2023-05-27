@@ -13,11 +13,13 @@
 #include "libft.h"
 
 /*
-    lstの各ノードに対して、f関数を適用し、新しいノードを作成する。新しいノードはft_lstnew関数を使用して作成する。
+    lstの各ノードに対して、f関数を適用し、新しいノードを作成する。
+    新しいノードはft_lstnew関数を使用して作成する。
     各新しいノードをリストに追加する。
     最後に、新しいリストの先頭ノードを返す。
 
-ただし、完全な実装を行うには、提供していただいたコードの他の部分（create_new関数など）や、ft_lstnew関数の実装も必要です。それらの情報が提供されると、より具体的な支援ができるかと思います。
+ただし、完全な実装を行うには、提供していただいたコードの他の部分（create_new関数など）や、
+ ft_lstnew関数の実装も必要です。それらの情報が提供されると、より具体的な支援ができるかと思います。
  */
 
 t_list	*create_new(t_list *lst, void *(*f)(void *))
@@ -45,10 +47,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	**head;
 
 	if (!lst || !f || !del)
-		return (0);
+		return (NULL);
 	head = (t_list **)malloc(sizeof(t_list *));
 	if (!head)
-		return (0);
-	*head = 0;
-	return (0);
+		return (NULL);
+	*head = NULL;
+	return (NULL);
 }

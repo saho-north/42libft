@@ -89,5 +89,6 @@ strtrim
 substr
 tolower
 toupper
+.idea
 
  .DS_Store
