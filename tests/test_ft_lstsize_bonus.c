@@ -6,12 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:58:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 13:01:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:53:10 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
 void	test_ft_lstsize(void)
 {

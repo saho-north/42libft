@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:03:19 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 15:22:07 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:37:55 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-    tmp = *lst;
-    while (tmp)
+	tmp = *lst;
+	while (tmp)
 	{
-        next = tmp->next;
-        ft_lstdelone(tmp, del);
+		next = tmp->next;
+		ft_lstdelone(tmp, del);
 		tmp = next;
 	}
-	*lst = 0;
+	*lst = NULL;
 }

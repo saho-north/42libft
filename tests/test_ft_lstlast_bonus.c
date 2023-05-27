@@ -6,13 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:00:59 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 13:01:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:52:57 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	test_ft_lstlast(void)
 {

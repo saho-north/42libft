@@ -6,13 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:20:12 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 12:55:31 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:52:44 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	test_ft_lstadd_front(void)
 {

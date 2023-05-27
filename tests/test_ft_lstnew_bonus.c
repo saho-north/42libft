@@ -6,13 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:34:01 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 12:38:59 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:53:06 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
-#include <string.h>
 
 int	test_ft_lstnew(void *content, void *expected_content)
 {
