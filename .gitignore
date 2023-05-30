@@ -91,5 +91,5 @@ tolower
 toupper
 .idea
 
- .DS_Store
+.DS_Store
 test

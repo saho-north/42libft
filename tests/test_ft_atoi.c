@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:00:00 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 00:04:36 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/29 22:03:05 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@ static void	test_ft_atoi(char *str)
 	int	actual;
 	int	expected;
 
+	clock_t start, end;
+	double my_atoi_time, system_atoi_time;
+	start = clock();
 	actual = ft_atoi(str);
+	end = clock();
+	my_atoi_time = ((double)(end - start)) / CLOCKS_PER_SEC;
+	start = clock();
 	expected = atoi(str);
+	end = clock();
+	system_atoi_time = ((double)(end - start)) / CLOCKS_PER_SEC;
 	printf("input    : %s\n", str);
-	printf("actual   : %d\n", actual);
-	printf("expected : %d\n", expected);
+	printf("actual   : %d (%lf秒)\n", actual, my_atoi_time);
+	printf("expected : %d (%lf秒)\n", expected, system_atoi_time);
 	if (actual == expected)
 		printf("[OK]\n");
 	else

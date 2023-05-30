@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 12:45:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/29 21:59:04 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <strings.h>
+# include <time.h>
 # include <unistd.h>
 
 typedef struct s_list
