@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 02:56:23 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/27 12:24:49 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/31 23:58:41 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	if (!new)
+	if (!new || !lst)
 		return ;
 	if (!*lst)
 		*lst = new;

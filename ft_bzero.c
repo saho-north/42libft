@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:49:10 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 13:24:19 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/31 23:43:49 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	str = (char *)s;
 	while (n > 0)
 	{
-		*str = '\0';
-		str++;
+		*(str++) = '\0';
 		n--;
 	}
 }

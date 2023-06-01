@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 03:52:25 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/05/29 17:57:24 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/31 23:48:50 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ('0' <= c && c <= '9')
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-	else if ('A' <= c && c <= 'Z')
-		return (1);
-	else if ('a' <= c && c <= 'z')
-		return (1);
-	else
-		return (0);
+	return (0);
 }

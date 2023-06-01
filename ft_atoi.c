@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 12:59:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/05/31 23:38:28 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ static long long	convert_num(const char *str, bool sign)
 	long long	ov_mod;
 	long long	num;
 
-	ov_div = LLONG_MAX / 10;
-	ov_mod = LLONG_MAX % 10;
+	ov_div = LONG_MAX / 10;
+	ov_mod = LONG_MAX % 10;
+	if (!sign)
+		ov_mod++;
 	num = 0;
 	while ('0' <= *str && *str <= '9')
 	{

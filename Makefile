@@ -50,174 +50,174 @@ bonus: $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus
 
-atoi: ft_atoi.c ./tests/test_ft_atoi.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+atoi: ./tests/test_ft_atoi.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-bzero: ft_bzero.c ./tests/test_ft_bzero.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+bzero: ./tests/test_ft_bzero.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-calloc: ft_calloc.c ft_bzero.c ./tests/test_ft_calloc.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+calloc: ./tests/test_ft_calloc.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-isalnum: ft_isalnum.c ./tests/test_ft_isalnum.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+isalnum: ./tests/test_ft_isalnum.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-isalpha: ft_isalpha.c ./tests/test_ft_isalpha.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+isalpha: ./tests/test_ft_isalpha.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-isascii: ft_isascii.c ./tests/test_ft_isascii.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+isascii: ./tests/test_ft_isascii.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-isdigit: ft_isdigit.c ./tests/test_ft_isdigit.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+isdigit: ./tests/test_ft_isdigit.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-isprint: ft_isprint.c ./tests/test_ft_isprint.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+isprint: ./tests/test_ft_isprint.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-itoa: ft_itoa.c ./tests/test_ft_itoa.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+itoa: ./tests/test_ft_itoa.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-memchr: ft_memchr.c ./tests/test_ft_memchr.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+memchr: ./tests/test_ft_memchr.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-memcmp: ft_memcmp.c ./tests/test_ft_memcmp.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+memcmp: ./tests/test_ft_memcmp.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-memcpy: ft_memcpy.c ./tests/test_ft_memcpy.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+memcpy: ./tests/test_ft_memcpy.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-memmove: ft_memmove.c ./tests/test_ft_memmove.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+memmove: ./tests/test_ft_memmove.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-memset: ft_memset.c ./tests/test_ft_memset.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+memset: ./tests/test_ft_memset.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-putchar: ft_putchar_fd.c ./tests/test_ft_putchar_fd.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+putchar: ./tests/test_ft_putchar_fd.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-putendl: ft_putendl_fd.c ./tests/test_ft_putendl_fd.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+putendl: ./tests/test_ft_putendl_fd.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-putnbr: ft_putnbr_fd.c ./tests/test_ft_putnbr_fd.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+putnbr: ./tests/test_ft_putnbr_fd.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-putstr: ft_putstr_fd.c ./tests/test_ft_putstr_fd.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+putstr: ./tests/test_ft_putstr_fd.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-split: ft_split.c ./tests/test_ft_split.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+split: ./tests/test_ft_split.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strchr: ft_strchr.c ./tests/test_ft_strchr.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strchr: ./tests/test_ft_strchr.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strdup: ft_strdup.c ft_memcpy.c ./tests/test_ft_strdup.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strdup: ./tests/test_ft_strdup.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-striteri: ft_striteri.c ft_strdup.c ft_memcpy.c ./tests/test_ft_striteri.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+striteri: ./tests/test_ft_striteri.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strjoin: ft_strjoin.c ft_strlen.c ./tests/test_ft_strjoin.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strjoin: ./tests/test_ft_strjoin.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strlcat: ft_strlcat.c ft_strlen.c ./tests/test_ft_strlcat.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strlcat: ./tests/test_ft_strlcat.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strlcpy: ft_strlcpy.c ft_strlen.c ./tests/test_ft_strlcpy.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strlcpy: ./tests/test_ft_strlcpy.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strlen: ft_strlen.c ./tests/test_ft_strlen.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strlen: ./tests/test_ft_strlen.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strmapi: ft_strmapi.c ft_strlen.c ./tests/test_ft_strmapi.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strmapi: ./tests/test_ft_strmapi.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strncmp: ft_strncmp.c ./tests/test_ft_strncmp.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strncmp: ./tests/test_ft_strncmp.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strnstr: ft_strnstr.c ./tests/test_ft_strnstr.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strnstr: ./tests/test_ft_strnstr.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strrchr: ft_strrchr.c ft_strlen.c ./tests/test_ft_strrchr.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strrchr: ./tests/test_ft_strrchr.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-strtrim: ft_strtrim.c ft_strlcpy.c ft_strlen.c ./tests/test_ft_strtrim.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+strtrim: ./tests/test_ft_strtrim.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-substr: ft_substr.c ft_strlen.c ./tests/test_ft_substr.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+substr: ./tests/test_ft_substr.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-tolower: ft_tolower.c ./tests/test_ft_tolower.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+tolower: ./tests/test_ft_tolower.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-toupper: ft_toupper.c ./tests/test_ft_toupper.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+toupper: ./tests/test_ft_toupper.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstnew: ft_lstnew_bonus.c ./tests/test_ft_lstnew_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstnew: ./tests/test_ft_lstnew_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstadd_front: ft_lstadd_front_bonus.c  ft_lstnew_bonus.c ./tests/test_ft_lstadd_front_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstadd_front: ./tests/test_ft_lstadd_front_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstsize: ft_lstsize_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstsize_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstsize: ./tests/test_ft_lstsize_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstlast: ft_lstlast_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstlast_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstlast: ./tests/test_ft_lstlast_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstadd_back: ft_lstadd_back_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstadd_back_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstadd_back: ./tests/test_ft_lstadd_back_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstdelone: ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstdelone_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstdelone: ./tests/test_ft_lstdelone_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstclear: ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstclear_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstclear: ./tests/test_ft_lstclear_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstiter: ft_lstiter_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstiter_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstiter: ./tests/test_ft_lstiter_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
 
-lstmap: ft_lstmap_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstnew_bonus.c ./tests/test_ft_lstmap_bonus.c
-	$(CC) $^ $(CFLAGS) $(DEBUG) -o test
+lstmap: ft_lstnew_bonus.c ./tests/test_ft_lstmap_bonus.c
+	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
 	./test
