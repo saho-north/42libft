@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 00:22:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:12:44 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,12 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
-	char	*src;
 	size_t	len;
 
-	src = (char *)s1;
-	len = 0;
-	while (src[len])
-		len++;
-	ptr = (char *)malloc(++len);
+	len = ft_strlen(s1) + 1;
+	ptr = (char *)ft_calloc(len, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	ptr = (char *)ft_memcpy(ptr, src, len);
+	ptr = (char *)ft_memcpy(ptr, s1, len);
 	return (ptr);
 }

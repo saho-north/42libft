@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:42:40 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/31 17:30:14 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/06/01 22:15:56 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ static t_list	*lstmaper(t_list *head, t_list *lst, void *(*f)(void *),
 	t_list	*prev;
 	t_list	*new;
 
-	prev = NULL;
-	new = NULL;
 	prev = head;
-	lst = lst->next;
 	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
@@ -43,10 +40,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-	head = NULL;
 	head = ft_lstnew(f(lst->content));
 	if (!head)
 		return (NULL);
-	head = lstmaper(head, lst, f, del);
+	head = lstmaper(head, lst->next, f, del);
 	return (head);
 }

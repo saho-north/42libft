@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:50:35 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/31 23:56:29 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/01 22:04:26 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ char	*ft_itoa(int n)
 
 	nbr = (long long)n;
 	nbrlen = get_nbrlen(nbr);
-	ptr = (char *)malloc(nbrlen + 1);
+	ptr = (char *)ft_calloc(nbrlen + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	ptr[nbrlen] = '\0';
 	if (nbr < 0)
 	{
-		ptr[0] = '-';
+		*ptr = '-';
 		nbr *= -1;
 	}
 	while (nbr >= 10)

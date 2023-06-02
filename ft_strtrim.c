@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/26 01:00:10 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/02 16:02:53 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ static size_t	get_trimmed_len(char const *s1, char const *set, size_t len,
 
 	end = len;
 	while (end > start && is_charset(s1[end - 1], set))
-	{
 		end--;
-	}
 	return (end - start);
 }
 
@@ -42,9 +40,7 @@ static size_t	get_start_index(char const *s1, char const *set, size_t len)
 
 	start = 0;
 	while (start < len && is_charset(s1[start], set))
-	{
 		start++;
-	}
 	return (start);
 }
 
@@ -63,6 +59,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	dest = (char *)malloc(dst_len + 1);
 	if (!dest)
 		return (0);
-	ft_strlcpy(dest, &s1[start], dst_len + 1);
+	ft_strlcpy(dest, s1 + start, dst_len + 1);
 	return (dest);
 }

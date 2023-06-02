@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Saho Kitahara <sakitaha@student.42tokyo    +#+  +:+       +#+        */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 20:56:34 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/24 18:05:16 by Saho Kitaha      ###   ########.fr       */
+/*   Updated: 2023/06/01 22:34:40 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
-	unsigned char	to_find;
-	size_t			i;
-
-	str = (unsigned char *)s;
-	to_find = (unsigned char)c;
-	i = 0;
-	while (i < n)
+	while (n--)
 	{
-		if (str[i] == to_find)
-			return (&str[i]);
-		i++;
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
+		s++;
 	}
 	return (NULL);
 }

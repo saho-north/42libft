@@ -6,48 +6,33 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:18:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 21:45:58 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:08:05 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*create_substr(char const *s, size_t len)
-{
-	char	*substr;
-	size_t	i;
-
-	substr = (char *)malloc(len + 1);
-	if (!substr)
-		return (NULL);
-	i = 0;
-	while (i < len && s[i])
-	{
-		substr[i] = s[i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	s_len;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (len == 0 || start >= s_len)
+	if (start >= s_len)
+		len = 0;
+	else if (len > s_len - (size_t)start)
+		len = s_len - (size_t)start;
+	substr = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!substr)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		substr = (char *)malloc(1);
-		if (!substr)
-			return (NULL);
-		*substr = 0;
-		return (substr);
+		substr[i] = s[start + i];
+		i++;
 	}
-	if (len > s_len - start)
-		len = s_len - start;
-	substr = create_substr(&s[start], len);
 	return (substr);
 }

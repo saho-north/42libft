@@ -51,173 +51,216 @@ bonus: $(BONUS_OBJS)
 .PHONY: all clean fclean re bonus
 
 atoi: ./tests/test_ft_atoi.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 bzero: ./tests/test_ft_bzero.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 calloc: ./tests/test_ft_calloc.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 isalnum: ./tests/test_ft_isalnum.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 isalpha: ./tests/test_ft_isalpha.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 isascii: ./tests/test_ft_isascii.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 isdigit: ./tests/test_ft_isdigit.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 isprint: ./tests/test_ft_isprint.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 itoa: ./tests/test_ft_itoa.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 memchr: ./tests/test_ft_memchr.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 memcmp: ./tests/test_ft_memcmp.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 memcpy: ./tests/test_ft_memcpy.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 memmove: ./tests/test_ft_memmove.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 memset: ./tests/test_ft_memset.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 putchar: ./tests/test_ft_putchar_fd.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 putendl: ./tests/test_ft_putendl_fd.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 putnbr: ./tests/test_ft_putnbr_fd.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 putstr: ./tests/test_ft_putstr_fd.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 split: ./tests/test_ft_split.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strchr: ./tests/test_ft_strchr.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strdup: ./tests/test_ft_strdup.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 striteri: ./tests/test_ft_striteri.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strjoin: ./tests/test_ft_strjoin.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strlcat: ./tests/test_ft_strlcat.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strlcpy: ./tests/test_ft_strlcpy.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strlen: ./tests/test_ft_strlen.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strmapi: ./tests/test_ft_strmapi.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strncmp: ./tests/test_ft_strncmp.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strnstr: ./tests/test_ft_strnstr.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strrchr: ./tests/test_ft_strrchr.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 strtrim: ./tests/test_ft_strtrim.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 substr: ./tests/test_ft_substr.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 tolower: ./tests/test_ft_tolower.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 toupper: ./tests/test_ft_toupper.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstnew: ./tests/test_ft_lstnew_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstadd_front: ./tests/test_ft_lstadd_front_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstsize: ./tests/test_ft_lstsize_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstlast: ./tests/test_ft_lstlast_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstadd_back: ./tests/test_ft_lstadd_back_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstdelone: ./tests/test_ft_lstdelone_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstclear: ./tests/test_ft_lstclear_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
 lstiter: ./tests/test_ft_lstiter_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
 
-lstmap: ft_lstnew_bonus.c ./tests/test_ft_lstmap_bonus.c
-	$(CC) $< $(SRCS) $(CFLAGS) $(DEBUG) -o test
+lstmap: ./tests/test_ft_lstmap_bonus.c
+	$(CC) $< $(SRCS) $(BONUS_SRCS) $(CFLAGS) $(DEBUG) -o test
+	rm -f $(OBJS) $(BONUS_OBJS)
 	./test
