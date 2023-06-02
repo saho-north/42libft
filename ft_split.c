@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/02 16:19:55 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:41:26 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static size_t	count_words(const char *str, char delimiter)
 
 	word_count = 0;
 	in_words_flag = false;
-	while (*str && delimiter)
+	while (*str)
 	{
 		if (!in_words_flag && *str != delimiter)
 		{
