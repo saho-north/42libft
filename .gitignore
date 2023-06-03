@@ -93,3 +93,8 @@ toupper
 
 .DS_Store
 test
+FT_SPLIT_TESTER
+Libftest
+libft-tester-tokyo
+libft-unit-test
+libftTester
