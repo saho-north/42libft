@@ -6,30 +6,21 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/02 18:41:26 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 21:46:20 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	not_delimiter_strlen(const char *str, char delimiter)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] && str[len] != delimiter)
-		len++;
-	return (len);
-}
-
-static void	*free_failed_malloc(char **dest, size_t str_no)
+static void	*free_failed_malloc(char **dest, size_t word_no)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < str_no)
+	while (i < word_no)
 	{
-		free(dest[i++]);
+		free(dest[i]);
+		i++;
 	}
 	free(dest);
 	dest = NULL;
@@ -39,23 +30,23 @@ static void	*free_failed_malloc(char **dest, size_t str_no)
 static char	**splitter(const char *str, char delimiter, char **dest,
 		size_t word_count)
 {
-	size_t	str_no;
-	size_t	len;
-	size_t	i;
+	size_t	word_no;
+	size_t	word_len;
 
-	str_no = 0;
-	while (*str && str_no < word_count)
+	word_no = 0;
+	while (*str && word_no < word_count)
 	{
 		if (*str != delimiter)
 		{
-			len = not_delimiter_strlen(str, delimiter);
-			dest[str_no] = (char *)ft_calloc(len + 1, sizeof(char));
-			if (!dest[str_no])
-				return (free_failed_malloc(dest, str_no));
-			i = 0;
-			while (*str && *str != delimiter)
-				dest[str_no][i++] = *(str++);
-			str_no++;
+			word_len = 0;
+			while (str[word_len] && str[word_len] != delimiter)
+				word_len++;
+			dest[word_no] = (char *)ft_calloc(word_len + 1, sizeof(char));
+			if (!dest[word_no])
+				return (free_failed_malloc(dest, word_no));
+			dest[word_no] = ft_memcpy(dest[word_no], str, word_len);
+			str += word_len;
+			word_no++;
 		}
 		else
 			str++;
@@ -66,19 +57,19 @@ static char	**splitter(const char *str, char delimiter, char **dest,
 static size_t	count_words(const char *str, char delimiter)
 {
 	size_t	word_count;
-	bool	in_words_flag;
+	bool	is_word;
 
 	word_count = 0;
-	in_words_flag = false;
+	is_word = false;
 	while (*str)
 	{
-		if (!in_words_flag && *str != delimiter)
+		if (!is_word && *str != delimiter)
 		{
-			in_words_flag = true;
+			is_word = true;
 			word_count++;
 		}
-		else if (in_words_flag && *str == delimiter)
-			in_words_flag = false;
+		else if (is_word && *str == delimiter)
+			is_word = false;
 		str++;
 	}
 	return (word_count);

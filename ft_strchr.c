@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:01:18 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/01 16:32:21 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 15:39:14 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (*str == to_find)
 		return (str);
-	return (0);
+	return (NULL);
 }

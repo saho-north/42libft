@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:03:19 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:06:53 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 22:46:24 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*tmp;
 	t_list	*next;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	tmp = *lst;
 	while (tmp)

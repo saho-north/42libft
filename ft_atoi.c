@@ -6,13 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/02 16:03:14 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 22:49:55 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long long	convert_num(const char *str, bool sign)
+static long long	convert_num(const char *str, bool is_negative)
 {
 	long long	ov_div;
 	long long	ov_mod;
@@ -20,14 +20,14 @@ static long long	convert_num(const char *str, bool sign)
 
 	ov_div = LONG_MAX / 10;
 	ov_mod = LONG_MAX % 10;
-	if (!sign)
+	if (is_negative)
 		ov_mod++;
 	num = 0;
 	while ('0' <= *str && *str <= '9')
 	{
 		if (num > ov_div || (num == ov_div && (*str - '0') > ov_mod))
 		{
-			if (sign)
+			if (!is_negative)
 				return (-1);
 			else
 				return (0);
@@ -35,7 +35,7 @@ static long long	convert_num(const char *str, bool sign)
 		num = num * 10 + (*str - '0');
 		str++;
 	}
-	if (!sign)
+	if (is_negative)
 		num *= -1;
 	return (num);
 }
@@ -43,17 +43,17 @@ static long long	convert_num(const char *str, bool sign)
 int	ft_atoi(const char *str)
 {
 	long long	num;
-	bool		sign;
+	bool		is_negative;
 
-	sign = true;
+	is_negative = false;
 	while (*str == ' ' || ('\t' <= *str && *str <= '\r'))
 		str++;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			sign = false;
+			is_negative = true;
 		str++;
 	}
-	num = convert_num(str, sign);
+	num = convert_num(str, is_negative);
 	return ((int)num);
 }

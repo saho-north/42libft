@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:45:10 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:07:09 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 22:46:46 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	if (lst->content)
-	{
 		del(lst->content);
-	}
 	free(lst);
 }

@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 13:28:52 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/05/25 13:39:07 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/02 21:10:23 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	test_split(char *str, char delimiter)
 
 int	main(void)
 {
+	test_split("--1-2--3---4----5-----42", '-');
 	test_split("_hello____world____japan____42____42Tokyo", '_');
 	test_split("split this string", ' ');
 	test_split("one|two|three|four|five", '|');

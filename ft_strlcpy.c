@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:45:13 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/02 15:27:33 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/03 18:10:30 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t	src_len;
+	size_t	srclen;
 	size_t	i;
 
-	src_len = ft_strlen(src);
+	srclen = ft_strlen(src);
 	if (size != 0)
 	{
 		i = 0;
@@ -28,5 +28,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		}
 		*dest = '\0';
 	}
-	return (src_len);
+	return (srclen);
 }
