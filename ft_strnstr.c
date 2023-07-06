@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:56:51 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/03 16:44:54 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/07/07 00:54:53 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		start++;
 	}
-	return (0);
+	return (NULL);
 }

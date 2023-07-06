@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:19:33 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/01 22:02:07 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:50:10 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (' ' <= c && c <= '~')
-		return (1);
-	else
-		return (0);
+	return (' ' <= c && c <= '~');
 }

@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 09:57:42 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/01 22:02:05 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:50:00 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
+	return ('0' <= c && c <= '9');
 }

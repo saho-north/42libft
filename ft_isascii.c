@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 04:17:43 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/01 22:01:56 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:49:33 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	if (0 <= c && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (0 <= c && c <= 127);
 }
