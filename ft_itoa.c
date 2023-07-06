@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:50:35 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:04:26 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/07/07 08:45:43 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,7 @@ char	*ft_itoa(int n)
 	}
 	while (nbr >= 10)
 	{
-		--nbrlen;
-		ptr[nbrlen] = nbr % 10 + '0';
+		ptr[--nbrlen] = nbr % 10 + '0';
 		nbr /= 10;
 	}
 	ptr[--nbrlen] = nbr + '0';
