@@ -22,7 +22,7 @@ BONUS_SRCS	= ft_lstnew_bonus.c \
 			  ft_lstmap_bonus.c
 OBJS 		= $(SRCS:.c=.o)
 BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
-INCS	= libft.h
+HDRS		= libft.h
 
 ALL_OBJS 	= $(OBJS)
 ifdef ADD
@@ -34,7 +34,7 @@ $(NAME): $(ALL_OBJS)
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(HDRS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
