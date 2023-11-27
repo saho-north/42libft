@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/08/25 16:02:10 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:37:01 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 // Added functions
+int					ft_strcasecmp(const char *s1, const char *s2);
 void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 #endif
