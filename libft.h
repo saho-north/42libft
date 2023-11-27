@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:09:50 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:37:01 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,8 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+
+// Added functions
+int					ft_strcasecmp(const char *s1, const char *s2);
 
 #endif
