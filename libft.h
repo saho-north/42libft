@@ -78,5 +78,6 @@ int					ft_toupper(int c);
 
 // Added functions
 int					ft_strcasecmp(const char *s1, const char *s2);
+void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 #endif
