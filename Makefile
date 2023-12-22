@@ -39,7 +39,11 @@ LST_SRCS  = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 LST_DIR   = ./srcs/lst/
 LST_OBJS  = $(addprefix $(LST_DIR), $(LST_SRCS:.c=.o))
 
-OBJS 		= $(STR_OBJS) $(CHAR_OBJS) $(MEM_OBJS) $(CONV_OBJS) $(PUT_OBJS)
+GNL_SRCS = get_next_line.c
+GNL_DIR  = ./srcs/gnl/
+GNL_OBJS = $(addprefix $(GNL_DIR), $(GNL_SRCS:.c=.o))
+
+OBJS 		= $(STR_OBJS) $(CHAR_OBJS) $(MEM_OBJS) $(CONV_OBJS) $(PUT_OBJS) $(GNL_OBJS)
 BONUS_OBJS	= $(LST_OBJS)
 
 ALL_OBJS 	= $(OBJS)
