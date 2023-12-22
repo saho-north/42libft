@@ -1,10 +1,11 @@
 NAME      = libft.a
 CC        = cc
-CFLAGS    = -Wall -Wextra -Werror -I$(HDR_DIR)
+CFLAGS    = -Wall -Wextra -Werror
 AR        = ar
 ARFLAGS   = rc
+INCLUDE   = -I$(HDR_DIR)
 
-HDR_LIST  = libft.h
+HDR_LIST  = libft.h get_next_line.h
 HDR_DIR   = ./includes/
 HDR       = $(addprefix $(HDR_DIR), $(HDR_LIST))
 
@@ -25,7 +26,7 @@ MEM_SRCS  = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c \
 MEM_DIR   = ./srcs/mem/
 MEM_OBJS  = $(addprefix $(MEM_DIR), $(MEM_SRCS:.c=.o))
 
-CONV_SRCS = ft_atoi.c ft_itoa.c
+CONV_SRCS = ft_atoi.c ft_itoa.c ft_atoi_endptr.c
 CONV_DIR  = ./srcs/conv/
 CONV_OBJS = $(addprefix $(CONV_DIR), $(CONV_SRCS:.c=.o))
 
@@ -57,7 +58,7 @@ $(NAME): $(ALL_OBJS)
 all: $(NAME)
 
 %.o: %.c $(HDR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
