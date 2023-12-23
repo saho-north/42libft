@@ -17,7 +17,7 @@ STR_DIR   = ./srcs/str/
 STR_OBJS  = $(addprefix $(STR_DIR), $(STR_SRCS:.c=.o))
 
 CHAR_SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-			ft_isprint.c ft_tolower.c ft_toupper.c
+			ft_isprint.c ft_tolower.c ft_toupper.c ft_isxdigit.c
 CHAR_DIR  = ./srcs/char/
 CHAR_OBJS = $(addprefix $(CHAR_DIR), $(CHAR_SRCS:.c=.o))
 
