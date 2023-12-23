@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:03:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/11/27 21:37:17 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:47:44 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_ext.h"
 
 /*
  * The strcasecmp() function compares the two strings s1 and s2,

@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 15:37:03 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/08/25 18:09:47 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:47:32 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_ext.h"
 
 /*
  * ft_realloc:

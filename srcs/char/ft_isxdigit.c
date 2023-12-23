@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 21:56:11 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 21:58:33 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:47:04 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_ext.h"
 
 int	ft_isxdigit(int c)
 {

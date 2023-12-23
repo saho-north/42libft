@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:37:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/22 22:37:55 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:47:19 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_ext.h"
 
 static t_atoi_res	convert_num(const char *str, bool is_negative)
 {

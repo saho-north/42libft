@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_hexchartoi.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 23:04:58 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 22:46:25 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/23 22:56:09 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/23 22:56:15 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft_ext.h"
 
-# include "libft.h"
-
-# define BUFFER_SIZE 1024
-
-typedef enum e_line_status
+int	ft_hexchartoi(char c)
 {
-	LINE_SUCCESS,
-	LINE_EOF_REACHED,
-	LINE_ERROR
-}					t_line_status;
-
-typedef struct s_gnl_res
-{
-	char			*line;
-	t_line_status	line_status;
-}					t_gnl_res;
-
-t_gnl_res			get_next_line(int fd);
-
-#endif
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	if (c >= 'a' && c <= 'f')
+		return (c - 'a' + 10);
+	if (c >= 'A' && c <= 'F')
+		return (c - 'A' + 10);
+	return (-1);
+}

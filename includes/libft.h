@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 21:58:47 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:46:19 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-typedef struct s_atoi_res
-{
-	int				num;
-	bool			is_valid;
-	const char		*endptr;
-}					t_atoi_res;
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
@@ -82,11 +75,5 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-
-// Added functions
-int					ft_strcasecmp(const char *s1, const char *s2);
-void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-t_atoi_res			ft_atoi_endptr(const char *str);
-int					ft_isxdigit(int c);
 
 #endif
