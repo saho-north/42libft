@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isxdigit.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 21:56:11 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 22:47:04 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/19 01:44:24 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 22:55:36 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_ext.h"
+#include "ft_stdlib.h"
 
-int	ft_isxdigit(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if ('0' <= c && c <= '9')
-		return (1);
-	if (('a' <= c && c <= 'f') || ('A' <= c && c <= 'F'))
-		return (1);
-	return (0);
+	void	*buf;
+	size_t	buf_size;
+
+	buf_size = count * size;
+	if (count > 0 && buf_size / count != size)
+		return (NULL);
+	buf = (void *)malloc(buf_size);
+	if (!buf)
+		return (NULL);
+	return (ft_memset(buf, 0, buf_size));
 }

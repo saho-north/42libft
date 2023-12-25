@@ -6,53 +6,63 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:50:35 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/07/07 08:45:43 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/25 22:56:04 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_exdlib.h"
+#include "ft_stdlib.h"
 
-static size_t	get_nbrlen(long long nbr)
+static size_t	count_digits(long long num)
 {
-	size_t	nbrlen;
+	size_t	len;
 
-	nbrlen = 0;
-	if (nbr == 0)
+	len = 0;
+	if (num == 0)
+	{
 		return (1);
-	if (nbr < 0)
-	{
-		nbr *= -1;
-		nbrlen++;
 	}
-	while (nbr > 0)
+	while (num)
 	{
-		nbr /= 10;
-		nbrlen++;
+		num /= 10;
+		len++;
 	}
-	return (nbrlen);
+	return (len);
+}
+
+static void	num_to_str(long long num, char *str, size_t len, bool is_negative)
+{
+	while (len--)
+	{
+		str[len + is_negative] = '0' + num % 10;
+		num /= 10;
+	}
+	if (is_negative)
+	{
+		str[0] = '-';
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	char		*ptr;
-	size_t		nbrlen;
-	long long	nbr;
+	long long	num;
+	size_t		len;
+	bool		is_negative;
+	char		*str;
 
-	nbr = (long long)n;
-	nbrlen = get_nbrlen(nbr);
-	ptr = (char *)ft_calloc(nbrlen + 1, sizeof(char));
-	if (!ptr)
+	num = (long long)n;
+	is_negative = false;
+	if (num < 0)
+	{
+		is_negative = true;
+		num = -num;
+	}
+	len = count_digits(num);
+	str = (char *)ft_calloc(len + is_negative + 1, sizeof(char));
+	if (!str)
+	{
 		return (NULL);
-	if (nbr < 0)
-	{
-		*ptr = '-';
-		nbr *= -1;
 	}
-	while (nbr >= 10)
-	{
-		ptr[--nbrlen] = nbr % 10 + '0';
-		nbr /= 10;
-	}
-	ptr[--nbrlen] = nbr + '0';
-	return (ptr);
+	num_to_str(num, str, len, is_negative);
+	return (str);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 09:57:42 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/12 14:50:00 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/18 12:19:33 by Saho Kitaha       #+#    #+#             */
+/*   Updated: 2023/12/25 15:07:45 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
 
-int	ft_isdigit(int c)
+int	ft_isprint(int c)
 {
-	return ('0' <= c && c <= '9');
+	return (' ' <= c && c <= '~');
 }

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_ext.h                                        :+:      :+:    :+:   */
+/*   ft_isxdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 22:43:38 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 22:55:39 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/23 21:56:11 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 17:02:46 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_EXT_H
-# define LIBFT_EXT_H
+#include "ft_ctype.h"
 
-# include "libft.h"
+/**
+* The isxdigit() function returns zero if the character tests false
+* and returns non-zero if the character tests true.
+*/
 
-int	ft_strcasecmp(const char *s1, const char *s2);
-
-#endif
+int	ft_isxdigit(int c)
+{
+	if ('0' <= c && c <= '9')
+		return (1);
+	if (('a' <= c && c <= 'f') || ('A' <= c && c <= 'F'))
+		return (1);
+	return (0);
+}

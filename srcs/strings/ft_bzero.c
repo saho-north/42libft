@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexchartoi.c                                    :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 22:56:09 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 22:56:15 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/18 12:49:10 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 22:55:41 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_ext.h"
+#include "ft_strings.h"
 
-int	ft_hexchartoi(char c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (c - '0');
-	if (c >= 'a' && c <= 'f')
-		return (c - 'a' + 10);
-	if (c >= 'A' && c <= 'F')
-		return (c - 'A' + 10);
-	return (-1);
+	s = ft_memset(s, 0, n);
 }

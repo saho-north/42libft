@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_stdlib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 09:36:10 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/12 14:49:13 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/25 17:07:19 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 18:37:08 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_STDLIB_H
+# define FT_STDLIB_H
 
-int	ft_isalpha(int c)
-{
-	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
-}
+# include <stdlib.h>
+
+int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+
+#endif

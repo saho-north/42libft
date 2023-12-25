@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_digittoint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 03:52:25 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/12 14:48:28 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/23 22:56:09 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 17:05:34 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
 
-int	ft_isalnum(int c)
+/**
+ * オリジナルのdigittointは0-15までの値を返し、範囲外の
+ * 文字を受け取った場合には0を返す。仕様を合わせるべきかまだ
+ * 迷っている。
+*/
+
+int	ft_digittoint(char c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	if (c >= 'a' && c <= 'f')
+		return (c - 'a' + 10);
+	if (c >= 'A' && c <= 'F')
+		return (c - 'A' + 10);
+	return (-1);
 }

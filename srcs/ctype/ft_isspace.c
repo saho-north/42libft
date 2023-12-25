@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 18:48:21 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/07/07 00:40:28 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/25 15:29:18 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 16:44:25 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ctype.h"
 
-int	ft_toupper(int c)
+/**
+ * The ft_isspace() function tests for the white-space characters.
+ * For any locale, this includes the following standard characters:
+ * ``\t''   ``\n''   ``\v''   ``\f''   ``\r''   `` ''
+ */
+
+int	ft_isspace(int c)
 {
-	if ('a' <= c && c <= 'z')
-		c -= 32;
-	return (c);
+	return ((c == ' ' || ('\t' <= c && c <= '\r')));
 }

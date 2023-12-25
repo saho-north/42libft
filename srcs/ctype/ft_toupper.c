@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_ext.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 22:43:38 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 22:55:39 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/18 18:48:21 by Saho Kitaha       #+#    #+#             */
+/*   Updated: 2023/12/25 15:28:08 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_EXT_H
-# define LIBFT_EXT_H
+#include "ft_ctype.h"
 
-# include "libft.h"
-
-int	ft_strcasecmp(const char *s1, const char *s2);
-
-#endif
+int	ft_toupper(int c)
+{
+	if ('a' <= c && c <= 'z')
+		c -= 32;
+	return (c);
+}

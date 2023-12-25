@@ -1,59 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_endptr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/03 22:49:55 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/22 22:37:07 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 22:56:59 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_exdlib.h"
+#include <limits.h>
 
-static long long	convert_num(const char *str, bool is_negative)
+static t_atoi_res	convert_num(const char *str, bool is_negative)
 {
-	long long	ov_div;
-	long long	ov_mod;
+	t_atoi_res	result;
 	long long	num;
+	long long	overflow_limit;
 
-	ov_div = LONG_MAX / 10;
-	ov_mod = LONG_MAX % 10;
-	if (is_negative)
-		ov_mod++;
+	result.num = 0;
+	result.is_valid = false;
+	result.endptr = NULL;
+	if (*str < '0' || '9' < *str)
+		return (result);
 	num = 0;
+	overflow_limit = (long long)INT_MAX + is_negative;
 	while ('0' <= *str && *str <= '9')
 	{
-		if (num > ov_div || (num == ov_div && (*str - '0') > ov_mod))
-		{
-			if (!is_negative)
-				return (-1);
-			else
-				return (0);
-		}
 		num = num * 10 + (*str - '0');
 		str++;
+		if (num > overflow_limit)
+			return (result);
 	}
 	if (is_negative)
 		num *= -1;
-	return (num);
+	result.num = (int)num;
+	result.is_valid = true;
+	result.endptr = str;
+	return (result);
 }
 
-int	ft_atoi(const char *str)
+t_atoi_res	ft_atoi_endptr(const char *str)
 {
-	long long	num;
-	bool		is_negative;
+	bool	is_negative;
 
 	is_negative = false;
 	while (*str == ' ' || ('\t' <= *str && *str <= '\r'))
-		str++;
-	if (*str == '+' || *str == '-')
 	{
-		if (*str == '-')
-			is_negative = true;
 		str++;
 	}
-	num = convert_num(str, is_negative);
-	return ((int)num);
+	if (*str == '+' || *str == '-')
+	{
+		is_negative = (*str == '-');
+		str++;
+	}
+	return (convert_num(str, is_negative));
 }

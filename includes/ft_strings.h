@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strings.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 04:17:43 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/12 14:49:33 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/25 18:33:32 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/25 22:55:42 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_STRINGS_H
+# define FT_STRINGS_H
 
-int	ft_isascii(int c)
-{
-	return (0 <= c && c <= 127);
-}
+void	ft_bzero(void *s, size_t n);
+
+#endif

@@ -6,23 +6,17 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/23 22:46:19 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/25 22:57:35 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
-# include <fcntl.h>
-# include <limits.h>
-# include <stdbool.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <strings.h>
-# include <time.h>
-# include <unistd.h>
+# include "ft_ctype.h"
+# include "ft_exdlib.h"
+# include "ft_stdlib.h"
+# include "ft_strings.h"
 
 typedef struct s_list
 {
@@ -30,15 +24,6 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_atoi(const char *str);
-void				ft_bzero(void *s, size_t n);
-void				*ft_calloc(size_t count, size_t size);
-int					ft_isalnum(int c);
-int					ft_isalpha(int c);
-int					ft_isascii(int c);
-int					ft_isdigit(int c);
-int					ft_isprint(int c);
-char				*ft_itoa(int n);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
@@ -73,7 +58,5 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-int					ft_tolower(int c);
-int					ft_toupper(int c);
 
 #endif
