@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strings.h                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 18:33:32 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 23:49:42 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/12/27 01:37:27 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/27 01:38:16 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
 
-# include <stddef.h>
 
-void	ft_bzero(void *s, size_t n);
-
-#endif
+void	ft_putchar_fd(char c)
+{
+	write(1, &c, 1);
+}

@@ -6,11 +6,13 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 22:12:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 18:43:58 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/25 23:47:32 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
+#include <limits.h>
+#include <stdbool.h>
 
 static long long	convert_num(const char *str, bool is_negative)
 {
@@ -52,13 +54,9 @@ int	ft_atoi(const char *str)
 	{
 		str++;
 	}
-	if (*str == '-')
+	if (*str == '+' || *str == '-')
 	{
-		is_negative = true;
-		str++;
-	}
-	else if (*str == '+')
-	{
+		is_negative = (*str == '-');
 		str++;
 	}
 	num = convert_num(str, is_negative);

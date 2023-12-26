@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 22:57:35 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/26 20:33:17 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "ft_exdlib.h"
 # include "ft_stdlib.h"
 # include "ft_strings.h"
+# include "get_next_line.h"
 
 typedef struct s_list
 {

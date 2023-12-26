@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strings.h                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 18:33:32 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 23:49:42 by sakitaha         ###   ########.fr       */
+/*   Created: 2023/05/18 20:56:34 by sakitaha          #+#    #+#             */
+/*   Updated: 2023/12/26 20:35:57 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
+#include "ft_string.h"
 
-# include <stddef.h>
-
-void	ft_bzero(void *s, size_t n);
-
-#endif
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	while (n--)
+	{
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
+		s++;
+	}
+	return (NULL);
+}
