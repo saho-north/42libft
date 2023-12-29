@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:18:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/07/07 00:40:53 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:21:00 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

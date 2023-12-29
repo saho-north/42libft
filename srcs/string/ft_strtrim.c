@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 13:11:29 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/07/07 00:48:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:19:36 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

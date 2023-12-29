@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:37:53 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/03 22:41:36 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:14:23 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

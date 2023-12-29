@@ -6,12 +6,17 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 23:04:58 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/26 20:32:56 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 21:32:49 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# include "ft_stdlib.h"
+# include "ft_string.h"
+# include <stdlib.h>
+# include <unistd.h>
 
 # define BUFFER_SIZE 1024
 

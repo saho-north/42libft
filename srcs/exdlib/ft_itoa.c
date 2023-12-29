@@ -6,12 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:50:35 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 22:56:04 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/27 23:33:15 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_exdlib.h"
-#include "ft_stdlib.h"
 
 static size_t	count_digits(long long num)
 {

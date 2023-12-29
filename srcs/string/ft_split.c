@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/03 21:46:20 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:14:54 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 static void	*free_failed_malloc(char **dest, size_t word_no)
 {

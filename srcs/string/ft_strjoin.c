@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:39:12 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/03 21:10:53 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:16:02 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

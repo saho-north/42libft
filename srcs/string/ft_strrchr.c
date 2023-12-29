@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:00:53 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/07/07 00:54:21 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:19:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

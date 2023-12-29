@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 23:06:36 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/20 23:03:28 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 21:36:58 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static char	*line_eof(char **buffered_text)
 	*buffered_text = NULL;
 	if (!last_line)
 	{
-		perror("Memory allocation failed");
 		return (NULL);
 	}
 	return (last_line);
@@ -35,13 +34,11 @@ static char	*line_continued(char **buffered_text, char *marker)
 	next_line = ft_substr(*buffered_text, 0, marker - *buffered_text + 1);
 	if (!next_line)
 	{
-		perror("Memory allocation failed");
 		return (NULL);
 	}
 	tmp = ft_strdup(marker + 1);
 	if (!tmp)
 	{
-		perror("Memory allocation failed");
 		free(next_line);
 		return (NULL);
 	}

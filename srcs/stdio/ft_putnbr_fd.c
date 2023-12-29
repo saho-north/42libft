@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:55:30 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/03 21:49:06 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 15:39:50 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdio.h"
 
 static void	putnbr_rec(unsigned int num, int fd)
 {

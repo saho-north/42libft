@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:24:37 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:39:00 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:12:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

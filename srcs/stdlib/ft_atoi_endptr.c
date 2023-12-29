@@ -6,12 +6,21 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 22:37:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/25 23:47:06 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:35:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_exdlib.h"
-#include <limits.h>
+#include "ft_stdlib.h"
+
+static t_atoi_res	set_atoi_result(int num, bool is_valid, const char *endptr)
+{
+	t_atoi_res	result;
+
+	result.num = num;
+	result.is_valid = is_valid;
+	result.endptr = (char *)endptr;
+	return (result);
+}
 
 static t_atoi_res	convert_num(const char *str, bool is_negative)
 {
@@ -19,9 +28,7 @@ static t_atoi_res	convert_num(const char *str, bool is_negative)
 	long long	num;
 	long long	overflow_limit;
 
-	result.num = 0;
-	result.is_valid = false;
-	result.endptr = NULL;
+	result = set_atoi_result(0, false, NULL);
 	if (*str < '0' || '9' < *str)
 		return (result);
 	num = 0;
@@ -35,9 +42,7 @@ static t_atoi_res	convert_num(const char *str, bool is_negative)
 	}
 	if (is_negative)
 		num *= -1;
-	result.num = (int)num;
-	result.is_valid = true;
-	result.endptr = str;
+	result = set_atoi_result(num, true, str);
 	return (result);
 }
 

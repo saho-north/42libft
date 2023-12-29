@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:42:40 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:15:56 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/27 23:33:47 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_lst_bonus.h"
 
 static t_list	*lstmaper(t_list *head, t_list *lst, void *(*f)(void *),
 		void (*del)(void *))

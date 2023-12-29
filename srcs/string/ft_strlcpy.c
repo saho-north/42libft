@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:45:13 by Saho Kitaha       #+#    #+#             */
-/*   Updated: 2023/06/03 18:10:30 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:16:39 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

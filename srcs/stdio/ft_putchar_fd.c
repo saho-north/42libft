@@ -6,11 +6,11 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 00:53:02 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/06/01 22:47:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/29 15:35:03 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stdio.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
