@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 22:56:09 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/27 02:23:45 by sakitaha         ###   ########.fr       */
+/*   Updated: 2023/12/30 11:15:26 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_digittoint(char c)
 {
-	if (c >= '0' && c <= '9')
+	if ('0' <= c && c <= '9')
 		return (c - '0');
-	if (c >= 'a' && c <= 'f')
+	if ('a' <= c && c <= 'f')
 		return (c - 'a' + 10);
-	if (c >= 'A' && c <= 'F')
+	if ('A' <= c && c <= 'F')
 		return (c - 'A' + 10);
 	return (-1);
 }
