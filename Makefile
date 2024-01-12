@@ -5,7 +5,7 @@ AR = ar
 ARFLAGS = rc
 INCLUDE = -I$(HDR_DIR)
 
-HDR_LIST  = ft_ctype.h ft_lst_bonus.h  ft_stdlib.h ft_strings.h libft.h ft_exdlib.h ft_stdio.h ft_string.h get_next_line.h
+HDR_LIST  = ft_ctype.h ft_lst_bonus.h  ft_stdlib.h ft_strings.h libft.h ft_exdlib.h ft_stdio.h ft_string.h get_next_line.h ft_strtol.h
 HDR_DIR = ./includes/
 HDR  = $(addprefix $(HDR_DIR), $(HDR_LIST))
 
@@ -30,7 +30,7 @@ STDIO_DIR  = ./srcs/stdio/
 STDIO_OBJS = $(addprefix $(STDIO_DIR), $(STDIO_SRCS:.c=.o))
 
 #./stdlib:
-STDLIB_SRCS = ft_atoi.c ft_atoi_endptr.c ft_calloc.c ft_realloc.c
+STDLIB_SRCS = ft_atoi.c ft_atoi_endptr.c ft_calloc.c ft_realloc.c ft_strtol.c ft_strtol_utils.c
 STDLIB_DIR  = ./srcs/stdlib/
 STDLIB_OBJS = $(addprefix $(STDLIB_DIR), $(STDLIB_SRCS:.c=.o))
 

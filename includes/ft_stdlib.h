@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 17:07:19 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/29 23:11:18 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/01/13 04:17:46 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STDLIB_H
 
 # include "ft_string.h"
+# include "ft_strtol.h"
 # include <errno.h>
 # include <limits.h>
 # include <stdbool.h>
