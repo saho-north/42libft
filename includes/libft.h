@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:09:44 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/29 23:24:05 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/01/13 22:52:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@
 # include "ft_stdlib.h"
 # include "ft_string.h"
 # include "ft_strings.h"
+
 #endif
