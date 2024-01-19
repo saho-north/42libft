@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 15:37:03 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/29 23:10:04 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/01/19 20:56:08 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 	{
 		ft_memcpy(new_ptr, ptr, old_size);
 		free(ptr);
+		ptr = NULL;
 	}
 	return (new_ptr);
 }

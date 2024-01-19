@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 23:48:07 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/29 23:14:54 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/01/19 20:56:21 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	*free_failed_malloc(char **dest, size_t word_no)
 	while (i < word_no)
 	{
 		free(dest[i]);
+		dest[i] = NULL;
 		i++;
 	}
 	free(dest);
