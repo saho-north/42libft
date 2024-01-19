@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 23:06:36 by sakitaha          #+#    #+#             */
-/*   Updated: 2023/12/29 21:36:58 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/01/20 02:18:22 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,9 @@ t_gnl_res	get_next_line(int fd)
 	}
 	res.line_status = extract_next_line(&buffered_text, &res.line);
 	if (res.line_status == LINE_ERROR || res.line_status == LINE_EOF_REACHED)
+	{
 		free(buffered_text);
+		buffered_text = NULL;
+	}
 	return (res);
 }
