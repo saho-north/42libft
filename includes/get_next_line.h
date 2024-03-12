@@ -22,10 +22,11 @@
 
 typedef enum e_line_status
 {
-	LINE_SUCCESS,
-	LINE_EOF_REACHED,
-	LINE_ERROR
-}					t_line_status;
+    LINE_ERROR,
+    LINE_SUCCESS,
+    LINE_EOF_REACHED
+} t_line_status;
+
 
 typedef struct s_gnl_res
 {
