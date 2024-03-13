@@ -6,117 +6,117 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 23:06:36 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/01/20 02:18:22 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/03/13 22:17:00 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*line_eof(char **buffered_text)
+static bool	line_continued(char **buffer, char **line, char *new_line_marker)
 {
-	char	*last_line;
-
-	last_line = ft_strdup(*buffered_text);
-	free(*buffered_text);
-	*buffered_text = NULL;
-	if (!last_line)
-	{
-		return (NULL);
-	}
-	return (last_line);
-}
-
-static char	*line_continued(char **buffered_text, char *marker)
-{
-	char	*next_line;
 	char	*tmp;
 
-	next_line = ft_substr(*buffered_text, 0, marker - *buffered_text + 1);
-	if (!next_line)
+	*line = ft_substr(*buffer, 0, new_line_marker - *buffer + 1);
+	if (!*line)
 	{
-		return (NULL);
+		return (false);
 	}
-	tmp = ft_strdup(marker + 1);
+	tmp = ft_strdup(new_line_marker + 1);
 	if (!tmp)
 	{
-		free(next_line);
-		return (NULL);
-	}
-	free(*buffered_text);
-	*buffered_text = tmp;
-	return (next_line);
-}
-
-static t_line_status	extract_next_line(char **buffered_text, char **line)
-{
-	char	*marker;
-
-	if (ft_strlen(*buffered_text) == 0)
-	{
+		free(*line);
 		*line = NULL;
-		return (LINE_EOF_REACHED);
+		return (false);
 	}
-	marker = ft_strchr(*buffered_text, '\n');
-	if (marker)
-	{
-		*line = line_continued(buffered_text, marker);
-		if (!*line)
-			return (LINE_ERROR);
-		return (LINE_SUCCESS);
-	}
-	*line = line_eof(buffered_text);
-	if (!*line)
-		return (LINE_ERROR);
-	return (LINE_EOF_REACHED);
+	free(*buffer);
+	*buffer = tmp;
+	return (true);
 }
 
-static t_line_status	read_from_file(int fd, char **buffered_text)
+static bool	extract_line(char **buffer, char **line)
+{
+	char	*new_line_marker;
+
+	if (ft_strlen(*buffer) == 0)
+	{
+		free(*buffer);
+		*buffer = NULL;
+		return (true);
+	}
+	new_line_marker = ft_strchr(*buffer, '\n');
+	if (new_line_marker)
+	{
+		return (line_continued(buffer, line, new_line_marker));
+	}
+	*line = ft_strdup(*buffer);
+	if (!*line)
+	{
+		return (false);
+	}
+	free(*buffer);
+	*buffer = NULL;
+	return (true);
+}
+
+static bool	read_file(int fd, char **buffer)
 {
 	char	read_buffer[BUFFER_SIZE + 1];
 	char	*tmp;
 	ssize_t	bytes_read;
 
-	while (!ft_strchr(*buffered_text, '\n'))
+	while (!ft_strchr(*buffer, '\n'))
 	{
 		bytes_read = read(fd, read_buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
-			return (LINE_ERROR);
+			return (false);
 		if (bytes_read == 0)
 			break ;
 		read_buffer[bytes_read] = '\0';
-		tmp = ft_strjoin(*buffered_text, read_buffer);
+		tmp = ft_strjoin(*buffer, read_buffer);
 		if (!tmp)
-			return (LINE_ERROR);
-		free(*buffered_text);
-		*buffered_text = tmp;
+			return (false);
+		free(*buffer);
+		*buffer = tmp;
 	}
-	return (LINE_SUCCESS);
+	return (true);
 }
 
-t_gnl_res	get_next_line(int fd)
+static bool	init_buffer(char **buffer)
 {
-	static char	*buffered_text;
-	t_gnl_res	res;
+	if (!*buffer)
+	{
+		*buffer = (char *)ft_calloc(1, sizeof(char));
+		if (!*buffer)
+		{
+			return (false);
+		}
+	}
+	return (true);
+}
 
-	if (!buffered_text)
-		buffered_text = (char *)ft_calloc(1, sizeof(char));
-	if (!buffered_text || fd < 0 || read(fd, 0, 0) < 0 || BUFFER_SIZE <= 0)
+char	*get_next_line(int fd, bool *line_status)
+{
+	static char	*buffer;
+	char		*line;
+
+	*line_status = false;
+	line = NULL;
+	if (!init_buffer(&buffer))
 	{
-		free(buffered_text);
-		res.line_status = LINE_ERROR;
-		return (res);
+		return (NULL);
 	}
-	res.line_status = read_from_file(fd, &buffered_text);
-	if (res.line_status == LINE_ERROR)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
-		free(buffered_text);
-		return (res);
+		free(buffer);
+		buffer = NULL;
+		return (NULL);
 	}
-	res.line_status = extract_next_line(&buffered_text, &res.line);
-	if (res.line_status == LINE_ERROR || res.line_status == LINE_EOF_REACHED)
+	if (!read_file(fd, &buffer) || !extract_line(&buffer, &line))
 	{
-		free(buffered_text);
-		buffered_text = NULL;
+		free(buffer);
+		buffer = NULL;
+		return (NULL);
 	}
-	return (res);
+	*line_status = true;
+	return (line);
 }
