@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_exdlib.h                                        :+:      :+:    :+:   */
+/*   ft_interpolate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 21:48:55 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/03/14 22:21:39 by sakitaha         ###   ########.fr       */
+/*   Created: 2024/03/14 22:17:39 by sakitaha          #+#    #+#             */
+/*   Updated: 2024/03/14 22:20:45 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_EXDLIB_H
-# define FT_EXDLIB_H
+#include "ft_exdlib.h"
 
-# include "ft_stdlib.h"
-# include <stdbool.h>
-
-double	ft_interpolate(double start, double end, double t);
-char	*ft_itoa(int n);
-int		ft_lerpcolor(int color_1, int color_2, double t);
-
-#endif
+double	ft_interpolate(double start, double end, double t)
+{
+	if (t < 0.0)
+	{
+		t = 0.0;
+	}
+	else if (t > 1.0)
+	{
+		t = 1.0;
+	}
+	if (start == end)
+	{
+		return (start);
+	}
+	return (start + (end - start) * t);
+}
