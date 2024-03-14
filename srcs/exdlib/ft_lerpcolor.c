@@ -6,18 +6,18 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 20:08:13 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/02/20 03:02:27 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/03/14 13:30:26 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_exdlib.h"
 
-static unsigned char	lerp(unsigned char start, unsigned char end, float t)
+static unsigned char	lerp(unsigned char start, unsigned char end, double t)
 {
 	return ((unsigned char)(start + (end - start) * t));
 }
 
-int	ft_lerpcolor(int color_0, int color_1, float t)
+int	ft_lerpcolor(int color_0, int color_1, double t)
 {
 	unsigned char	red;
 	unsigned char	green;
