@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 23:42:39 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/03/17 01:36:44 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/03/17 01:43:54 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_free_2d_array(void **array, size_t size)
 		return ;
 	}
 	i = 0;
-	while (array[i] && (size == 0 || i < size))
+	while ((size == 0 || i < size) && array[i])
 	{
 		free(array[i]);
 		array[i] = NULL;

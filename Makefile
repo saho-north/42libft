@@ -15,7 +15,7 @@ CTYPE_DIR  = ./srcs/ctype/
 CTYPE_OBJS = $(addprefix $(CTYPE_DIR), $(CTYPE_SRCS:.c=.o))
 
 #./exdlib:
-EXDLIB_SRCS = ft_interpolate.c ft_itoa.c ft_lerpcolor.c
+EXDLIB_SRCS = ft_interpolate.c ft_itoa.c ft_lerpcolor.c ft_free_2d_array.c
 EXDLIB_DIR  = ./srcs/exdlib/
 EXDLIB_OBJS = $(addprefix $(EXDLIB_DIR), $(EXDLIB_SRCS:.c=.o))
 
