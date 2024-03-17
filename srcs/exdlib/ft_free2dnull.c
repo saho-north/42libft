@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_2d_array.c                                 :+:      :+:    :+:   */
+/*   ft_free2dnull.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 23:42:39 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/03/17 01:43:54 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/03/17 09:28:36 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 /**
  * Frees a dynamically allocated 2D array of any type
- * up to a specified size or until a NULL pointer is encountered.
- * If `size` is 0, assumes the array ends with a NULL pointer.
- * The caller must ensure the array is correctly sized or NULL-terminated.
+ * until a NULL pointer is encountered.
+ * It is caller's responsibility to ensure
+ * that the array is NULL-terminated.
  */
-void	ft_free_2d_array(void **array, size_t size)
+void	ft_free2dnull(void **array)
 {
 	size_t	i;
 
@@ -27,7 +27,7 @@ void	ft_free_2d_array(void **array, size_t size)
 		return ;
 	}
 	i = 0;
-	while ((size == 0 || i < size) && array[i])
+	while (array[i])
 	{
 		free(array[i]);
 		array[i] = NULL;

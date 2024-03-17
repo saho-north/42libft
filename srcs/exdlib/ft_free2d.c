@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_exdlib.h                                        :+:      :+:    :+:   */
+/*   ft_free2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 21:48:55 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/03/17 09:29:45 by sakitaha         ###   ########.fr       */
+/*   Created: 2024/03/16 23:42:39 by sakitaha          #+#    #+#             */
+/*   Updated: 2024/03/17 09:25:50 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_EXDLIB_H
-# define FT_EXDLIB_H
+#include "ft_exdlib.h"
 
-# include "ft_stdlib.h"
-# include <stdbool.h>
+/**
+ * Frees a dynamically allocated 2D array of any type
+ * up to a specified size or until a NULL pointer is encountered.
+ */
+void	ft_free2d(void **array, size_t size)
+{
+	size_t	i;
 
-void	**ft_alloc2d(size_t height, size_t width, size_t elem_size);
-void	ft_free2d(void **array, size_t size);
-void	ft_free2dnull(void **array);
-double	ft_interpolate(double start, double end, double t);
-char	*ft_itoa(int n);
-int		ft_lerpcolor(int color_1, int color_2, double t);
-
-#endif
+	if (!array)
+	{
+		return ;
+	}
+	i = 0;
+	while (i < size && array[i])
+	{
+		free(array[i]);
+		array[i] = NULL;
+		i++;
+	}
+	free(array);
+}
